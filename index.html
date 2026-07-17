@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICAN — قاعة محاضرات وتدريب | التجمع الخامس</title>
+<meta name="description" content="ICAN: قاعة تدريب ومحاضرات بسعة 30-35 شخصًا، شاشة تفاعلية حديثة، ومواعيد صباحية ومسائية. التجمع الخامس، القاهرة الجديدة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#141311;
+    --paper:#FFFFFF;
+    --red:#E2222B;
+    --red-deep:#921219;
+    --panel:#F3F1EB;
+    --graphite:#5C5A54;
+    --line:rgba(20,19,17,0.10);
+    --radius:2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+  body{
+    font-family:'Tajawal', sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.75;
+    font-size:16px;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{
+    font-family:'Cairo', sans-serif;
+    font-weight:800;
+    line-height:1.25;
+    letter-spacing:-0.01em;
+  }
+  .num, .price, .time-tag{ font-family:'Space Grotesk', sans-serif; }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  ul{list-style:none;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    font-size:13px; font-weight:700; letter-spacing:0.03em;
+    color:var(--red-deep); border:1px solid var(--line);
+    padding:7px 16px; border-radius:100px; background:#fff;
+  }
+  .eyebrow::before{content:""; width:7px; height:7px; background:var(--red); border-radius:50%; flex:none;}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:15px 30px; border-radius:2px; font-weight:700; font-size:15.5px;
+    border:1.5px solid var(--ink); cursor:pointer; transition:transform .18s ease, background .18s ease, color .18s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--ink); color:#fff; border-color:var(--ink);}
+  .btn-primary:hover{background:var(--red); border-color:var(--red); transform:translateY(-2px);}
+  .btn-outline{background:transparent; color:var(--ink);}
+  .btn-outline:hover{background:var(--ink); color:#fff; transform:translateY(-2px);}
+  .btn-red{background:var(--red); color:#fff; border-color:var(--red);}
+  .btn-red:hover{background:var(--red-deep); border-color:var(--red-deep); transform:translateY(-2px);}
+
+  /* ===== HEADER ===== */
+  header{
+    position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(10px); border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between; height:82px;}
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand img{height:40px; width:auto;}
+  .nav-links{display:flex; align-items:center; gap:34px; font-weight:600; font-size:14.5px;}
+  .nav-links a{position:relative; padding:6px 0; color:var(--ink);}
+  .nav-links a::after{content:""; position:absolute; right:0; bottom:0; width:0; height:2px; background:var(--red); transition:width .25s ease;}
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{display:flex; align-items:center; gap:14px;}
+  .burger{display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:6px;}
+  .burger span{width:24px; height:2.5px; background:var(--ink); border-radius:2px;}
+  .mobile-menu{display:none; flex-direction:column; gap:2px; border-top:1px solid var(--line); background:#fff;}
+  .mobile-menu a{padding:16px 28px; border-bottom:1px solid var(--line); font-weight:600;}
+  .mobile-menu.open{display:flex;}
+
+  @media (max-width:920px){
+    .nav-links, .nav-cta .btn-outline{display:none;}
+    .burger{display:flex;}
+  }
+
+  /* ===== HERO ===== */
+  .hero{padding:88px 0 60px; position:relative;}
+  .hero-grid{display:grid; grid-template-columns:1.15fr 0.85fr; gap:64px; align-items:center;}
+  .hero h1{font-size:clamp(38px,5vw,60px); margin:22px 0 22px;}
+  .hero h1 .accent{color:var(--red);}
+  .hero p.lead{font-size:19px; color:var(--graphite); max-width:520px; margin-bottom:34px;}
+  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:36px;}
+  .hero-stats{display:flex; gap:32px; flex-wrap:wrap;}
+  .stat b{display:block; font-family:'Space Grotesk'; font-size:30px; font-weight:700; color:var(--ink);}
+  .stat span{font-size:13.5px; color:var(--graphite);}
+
+  .hero-visual{
+    background:var(--panel); border:1px solid var(--line); border-radius:4px; padding:30px;
+  }
+  .hv-title{font-size:13px; font-weight:700; color:var(--graphite); margin-bottom:18px; display:flex; justify-content:space-between; align-items:center;}
+  .hv-title .tag{font-family:'Space Grotesk'; font-size:12px; background:var(--ink); color:#fff; padding:4px 10px; border-radius:100px;}
+
+  .hbar-row{margin-bottom:20px;}
+  .hbar-label{display:flex; justify-content:space-between; font-size:13.5px; font-weight:700; margin-bottom:8px;}
+  .hbar-track{position:relative; height:34px; background:#fff; border:1px solid var(--line); border-radius:3px; overflow:hidden;}
+  .hbar-fill{position:absolute; top:0; bottom:0; border-radius:2px;}
+  .hbar-fill.market{background:repeating-linear-gradient(135deg,#d8d5cd,#d8d5cd 6px,#e6e3db 6px,#e6e3db 12px);}
+  .hbar-fill.ican{background:linear-gradient(90deg, var(--red), var(--red-deep));}
+  .hbar-ticks{display:flex; justify-content:space-between; font-family:'Space Grotesk'; font-size:11px; color:var(--graphite); margin-top:6px;}
+  .now-marker{position:absolute; top:-6px; width:2px; height:46px; background:var(--ink); z-index:5;}
+  .now-marker::after{content:"الآن"; position:absolute; top:-20px; right:-14px; font-size:10.5px; font-weight:700; font-family:'Cairo'; white-space:nowrap;}
+  .hv-note{font-size:13.5px; color:var(--graphite); border-top:1px dashed var(--line); padding-top:16px; margin-top:6px;}
+  .hv-note strong{color:var(--ink);}
+
+  @media (max-width:920px){
+    .hero-grid{grid-template-columns:1fr; gap:40px;}
+  }
+
+  /* ===== SECTION GENERIC ===== */
+  section{padding:96px 0;}
+  .section-head{max-width:640px; margin-bottom:56px;}
+  .section-head h2{font-size:clamp(28px,3.4vw,40px); margin-top:16px;}
+  .section-head p{color:var(--graphite); font-size:17px; margin-top:14px;}
+  .panel{background:var(--panel);}
+
+  /* reveal */
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ===== WHY GRID ===== */
+  .why-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .why-card{background:#fff; padding:34px 26px; }
+  .why-card .ic{width:44px; height:44px; margin-bottom:20px;}
+  .why-card h3{font-size:18px; margin-bottom:10px;}
+  .why-card p{font-size:14.5px; color:var(--graphite);}
+  @media (max-width:920px){ .why-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:600px){ .why-grid{grid-template-columns:1fr;} }
+
+  /* ===== SERVICES ===== */
+  .services-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:22px;}
+  .service-card{border:1px solid var(--line); padding:30px 24px; border-radius:3px; transition:border-color .2s ease, transform .2s ease;}
+  .service-card:hover{border-color:var(--red); transform:translateY(-4px);}
+  .service-card .num{color:var(--red); font-size:14px; font-weight:700; display:block; margin-bottom:16px;}
+  .service-card h3{font-size:18.5px; margin-bottom:10px;}
+  .service-card p{font-size:14.5px; color:var(--graphite);}
+  @media (max-width:920px){ .services-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:600px){ .services-grid{grid-template-columns:1fr;} }
+
+  /* ===== PRICING ===== */
+  .pricing-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-bottom:28px;}
+  .price-card{border:1px solid var(--line); border-radius:3px; padding:34px 28px; background:#fff; position:relative;}
+  .price-card.hi{border-color:var(--ink); box-shadow:0 18px 40px -22px rgba(0,0,0,0.35);}
+  .price-card .badge{position:absolute; top:-13px; right:28px; background:var(--red); color:#fff; font-size:12px; font-weight:700; padding:5px 12px; border-radius:100px;}
+  .price-card h3{font-size:16px; color:var(--graphite); font-weight:700; margin-bottom:6px;}
+  .price-card .duration{font-size:13px; color:var(--graphite); margin-bottom:20px;}
+  .price-card .price{font-size:38px; font-weight:700; margin-bottom:2px;}
+  .price-card .price sup{font-size:15px; font-weight:600; margin-left:4px;}
+  .price-card .with-tax{font-size:13px; color:var(--graphite); margin-bottom:22px;}
+  .price-card .per-person{font-size:13px; color:var(--red-deep); font-weight:700; background:#fdecec; display:inline-block; padding:4px 10px; border-radius:100px; margin-bottom:20px;}
+  .price-card ul{font-size:14px; color:var(--ink); display:flex; flex-direction:column; gap:9px;}
+  .price-card ul li{display:flex; gap:8px; align-items:flex-start;}
+  .price-card ul li::before{content:"—"; color:var(--red); flex:none;}
+  .price-note{border:1px dashed var(--line); border-radius:3px; padding:22px 26px; display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap;}
+  .price-note p{font-size:14.5px; color:var(--graphite); max-width:640px;}
+  .price-note strong{color:var(--ink);}
+  @media (max-width:920px){ .pricing-grid{grid-template-columns:1fr;} }
+
+  /* ===== SEGMENTS ===== */
+  .seg-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
+  .seg-chip{border:1px solid var(--line); border-radius:3px; padding:20px 18px; font-weight:700; font-size:14.5px; display:flex; align-items:center; gap:10px; background:#fff;}
+  .seg-chip::before{content:""; width:8px; height:8px; background:var(--red); border-radius:50%; flex:none;}
+  @media (max-width:920px){ .seg-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:560px){ .seg-grid{grid-template-columns:1fr;} }
+
+  /* ===== PROCESS ===== */
+  .process{display:grid; grid-template-columns:repeat(4,1fr); gap:0; position:relative;}
+  .process::before{content:""; position:absolute; top:26px; right:12.5%; left:12.5%; height:1px; background:var(--line);}
+  .step{padding:0 20px; position:relative;}
+  .step .step-num{width:52px; height:52px; border-radius:50%; background:var(--ink); color:#fff; font-family:'Space Grotesk'; font-weight:700; font-size:20px; display:flex; align-items:center; justify-content:center; margin-bottom:22px; position:relative; z-index:2;}
+  .step h3{font-size:17px; margin-bottom:8px;}
+  .step p{font-size:14px; color:var(--graphite);}
+  @media (max-width:920px){
+    .process{grid-template-columns:1fr 1fr; row-gap:40px;}
+    .process::before{display:none;}
+  }
+  @media (max-width:560px){ .process{grid-template-columns:1fr;} }
+
+  /* ===== CONTACT ===== */
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start;}
+  .contact-list li{display:flex; gap:14px; padding:18px 0; border-bottom:1px solid var(--line);}
+  .contact-list .lbl{font-weight:700; min-width:96px; color:var(--graphite); font-size:14px;}
+  .contact-list .val{font-weight:600;}
+  .social-row{display:flex; gap:12px; margin-top:24px;}
+  .social-row a{width:42px; height:42px; border:1px solid var(--line); border-radius:50%; display:flex; align-items:center; justify-content:center; transition:all .2s ease;}
+  .social-row a:hover{background:var(--ink); border-color:var(--ink); color:#fff;}
+  .contact-card{background:var(--ink); color:#fff; padding:40px; border-radius:4px;}
+  .contact-card h3{color:#fff; font-size:22px; margin-bottom:14px;}
+  .contact-card p{color:rgba(255,255,255,0.72); font-size:14.5px; margin-bottom:26px;}
+  .contact-card .btn-red{width:100%; margin-bottom:12px;}
+  .contact-card .btn-outline-w{width:100%; border:1.5px solid rgba(255,255,255,0.4); color:#fff; background:transparent;}
+  .contact-card .btn-outline-w:hover{background:#fff; color:var(--ink);}
+  .note-placeholder{font-size:12.5px; color:rgba(255,255,255,0.5); margin-top:18px; line-height:1.6;}
+  @media (max-width:920px){ .contact-grid{grid-template-columns:1fr;} }
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--ink); color:rgba(255,255,255,0.7); padding:60px 0 28px;}
+  .footer-top{display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:30px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.12); margin-bottom:26px;}
+  .footer-brand img{height:36px; filter:brightness(0) invert(1);}
+  .footer-tag{font-size:13.5px; margin-top:14px; color:rgba(255,255,255,0.55);}
+  .footer-links{display:flex; gap:40px; flex-wrap:wrap;}
+  .footer-links h4{color:#fff; font-size:14px; margin-bottom:14px;}
+  .footer-links ul{display:flex; flex-direction:column; gap:9px; font-size:13.5px;}
+  .footer-bottom{display:flex; justify-content:space-between; font-size:12.5px; flex-wrap:wrap; gap:10px;}
+
+  ::selection{background:var(--red); color:#fff;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand"><img src="data:image/png;base64,{{LOGO_B64}}" alt="ICAN"></div>
+    <nav class="nav-links">
+      <a href="#why">ليه ICAN</a>
+      <a href="#services">الخدمات</a>
+      <a href="#pricing">الأسعار</a>
+      <a href="#audience">لمين المكان ده</a>
+      <a href="#process">خطوات الحجز</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-outline">تواصل واتساب</a>
+      <a href="#contact" class="btn btn-primary">احجز معاينة</a>
+      <button class="burger" id="burgerBtn" aria-label="فتح القائمة"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#why">ليه ICAN</a>
+    <a href="#services">الخدمات</a>
+    <a href="#pricing">الأسعار</a>
+    <a href="#audience">لمين المكان ده</a>
+    <a href="#process">خطوات الحجز</a>
+    <a href="#contact">تواصل</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal in">
+      <span class="eyebrow">قاعة محاضرات وتدريب — التجمع الخامس، القاهرة الجديدة</span>
+      <h1>مساحة تسع <span class="accent">35</span> شخص، ومواعيد تسع يومك كله</h1>
+      <p class="lead">شاشة تفاعلية حديثة، تقنية عرض وصوت احترافية، ونظام شيفتين صباحي ومسائي — عشان جلستك متبقاش محتاجة تخلص مع أول غروب.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">احجز معاينة المكان</a>
+        <a href="#pricing" class="btn btn-outline">شوف الأسعار</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>30–35</b><span>سعة القاعة (شخص)</span></div>
+        <div class="stat"><b>8ص–10م</b><span>مواعيد التشغيل يوميًا</span></div>
+        <div class="stat"><b>+14%</b><span>الضريبة معلنة من أول لحظة</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal in">
+      <div class="hv-title"><span>مقارنة مواعيد التشغيل في السوق</span><span class="tag">مباشر</span></div>
+
+      <div class="hbar-row">
+        <div class="hbar-label"><span>أغلب قاعات السوق</span><span class="time-tag">9:00ص – 5:00م</span></div>
+        <div class="hbar-track" id="marketTrack">
+          <div class="hbar-fill market" style="right:12.5%; width:33.3%;"></div>
+        </div>
+      </div>
+
+      <div class="hbar-row">
+        <div class="hbar-label"><span style="color:var(--red-deep)">ICAN</span><span class="time-tag" style="color:var(--red-deep)">8:00ص – 10:00م</span></div>
+        <div class="hbar-track" id="icanTrack">
+          <div class="hbar-fill ican" style="right:11.1%; width:77.7%;"></div>
+          <div class="now-marker" id="nowMarker"></div>
+        </div>
+      </div>
+
+      <div class="hbar-ticks"><span>6ص</span><span>10ص</span><span>2م</span><span>6م</span><span>10م</span><span>12ص</span></div>
+
+      <div class="hv-note">بعد ما بيقفلوا الساعة 5، <strong>ICAN لسه شغالة لحد 10 بالليل</strong> — من غير فرق سعر ولا شروط إضافية.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY ================= -->
+<section id="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">ليه ICAN</span>
+      <h2>كل تفصيلة في المكان ليها غرض واحد: تخلي جلستك تنجح</h2>
+      <p>التدريب اتغيّر، لكن أغلب القاعات لسه بتتعامل معاه كأنه اجتماع عادي. عندنا كل حاجة اتصممت من الأول عشان التدريب، مش اتحوّرت من غرفة اجتماعات.</p>
+    </div>
+
+    <div class="why-grid reveal">
+      <div class="why-card">
+        <svg class="ic" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="14" r="8" fill="#E2222B"/><path d="M8 42c0-10 7-16 16-16s16 6 16 16" stroke="#141311" stroke-width="3" stroke-linecap="round"/></svg>
+        <h3>سعة حقيقية للتدريب</h3>
+        <p>من 30 لـ35 شخص في نفس القاعة — مساحة مصممة لورش عمل وتدريب جماعي فعلي، مش غرفة اجتماعات اتحشر فيها كراسي زيادة.</p>
+      </div>
+      <div class="why-card">
+        <svg class="ic" viewBox="0 0 48 48" fill="none"><rect x="4" y="8" width="40" height="26" rx="2" stroke="#141311" stroke-width="3"/><path d="M14 42h20" stroke="#E2222B" stroke-width="3" stroke-linecap="round"/><path d="M24 34v8" stroke="#141311" stroke-width="3"/></svg>
+        <h3>شاشة تفاعلية حديثة</h3>
+        <p>مش مجرد شاشة عرض — شاشة تفاعلية كبيرة تخلي أي عرض تقديمي أو نقاش أوضح لكل حد في القاعة، حتى القاعد في آخرها.</p>
+      </div>
+      <div class="why-card">
+        <svg class="ic" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#141311" stroke-width="3"/><path d="M24 14v10l7 5" stroke="#E2222B" stroke-width="3" stroke-linecap="round"/></svg>
+        <h3>شيفت صباحي ومسائي</h3>
+        <p>مفتوحين من 8 الصبح لحد 10 بالليل. لو جلستك مسائية بعد شغل الناس، مش هتلاقي نفسك من غير مكان ولا بتدفع سعر تمديد مبالغ فيه.</p>
+      </div>
+      <div class="why-card">
+        <svg class="ic" viewBox="0 0 48 48" fill="none"><path d="M8 24h32M24 8v32" stroke="#141311" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="24" r="18" stroke="#E2222B" stroke-width="3"/></svg>
+        <h3>شفافية كاملة في السعر</h3>
+        <p>السعر شامل الضريبة معلن من أول مكالمة، من غير مفاجآت أو "شروط تحت في الفاتورة".</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="panel" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">الخدمات</span>
+      <h2>مصممة لكل شكل من أشكال التعلّم المهني</h2>
+      <p>سواء كنت هتقدّم تدريب داخلي، ورشة عمل تفاعلية، أو ندوة مهنية — القاعة بتدّيك المساحة اللي تخلي محتواك هو البطل.</p>
+    </div>
+
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <span class="num">01</span>
+        <h3>تدريب داخل الشركات</h3>
+        <p>بيئة احترافية لبرامج تدريب الموظفين، وتأهيل الكوادر الجديدة، ومبادرات التعلّم والتطوير.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">02</span>
+        <h3>ورش عمل</h3>
+        <p>مساحة مصممة تشجّع التفاعل والمشاركة الجماعية والتدريب العملي وجهًا لوجه.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">03</span>
+        <h3>ندوات مهنية</h3>
+        <p>قدّم عرضك التقديمي بثقة، جوه بيئة تعكس احترافية شركتك أمام الحضور.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">04</span>
+        <h3>برامج تعليمية</h3>
+        <p>مساحة حديثة تدعم المدربين والمؤسسات التعليمية في تقديم محتوى تعليمي مؤثر.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">نظام التسعير</span>
+      <h2>سعر واضح، مبني على بيانات فعلية من السوق</h2>
+      <p>كل سعر معروض بالصافي وبعد إضافة الـ14% ضريبة، عشان تعرف التكلفة الحقيقية من أول لحظة.</p>
+    </div>
+
+    <div class="pricing-grid reveal">
+      <div class="price-card">
+        <h3>بالساعة</h3>
+        <div class="duration">مناسبة لاجتماع قصير أو جلسة سريعة</div>
+        <div class="price">2,200<sup>ج.م / ساعة</sup></div>
+        <div class="with-tax">شامل الضريبة: 2,508 ج.م</div>
+        <ul>
+          <li>سعة حتى 35 شخص</li>
+          <li>الشاشة التفاعلية والصوت متاحين</li>
+          <li>واي فاي عالي السرعة</li>
+        </ul>
+      </div>
+      <div class="price-card hi">
+        <span class="badge">الأكثر طلبًا</span>
+        <h3>نصف يوم</h3>
+        <div class="duration">4 ساعات متواصلة</div>
+        <div class="price">7,500<sup>ج.م</sup></div>
+        <div class="with-tax">شامل الضريبة: 8,550 ج.م — بمعدل 1,875 ج.م/ساعة</div>
+        <div class="per-person">≈ 59 ج.م للفرد في الساعة (عند 32 شخص)</div>
+        <ul>
+          <li>كل مزايا الباقة بالساعة</li>
+          <li>استراحة قهوة وشاي</li>
+          <li>دعم فني حاضر طول الجلسة</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <h3>يوم كامل</h3>
+        <div class="duration">8 ساعات متواصلة</div>
+        <div class="price">13,000<sup>ج.م</sup></div>
+        <div class="with-tax">شامل الضريبة: 14,820 ج.م — بمعدل 1,625 ج.م/ساعة</div>
+        <div class="per-person">≈ 51 ج.م للفرد في الساعة (عند 32 شخص)</div>
+        <ul>
+          <li>أفضل سعر للساعة من كل الباقات</li>
+          <li>استراحتين + غداء عمل اختياري</li>
+          <li>ترتيب القاعة حسب طبيعة الجلسة</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="price-note reveal">
+      <p><strong>باقة شهرية لمراكز التدريب:</strong> 8 جلسات نصف يوم شهريًا بخصم 15% عن السعر العادي — مناسبة لمراكز التدريب والدبلومات اللي عندها برنامج منتظم.</p>
+      <a href="#contact" class="btn btn-outline">اسأل عن الباقة الشهرية</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AUDIENCE ================= -->
+<section class="panel" id="audience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">لمين المكان ده</span>
+      <h2>لأي جهة بتؤمن إن التعلّم يستاهل مكان صح</h2>
+      <p>مهما كان مجالك، لو التدريب أو التعلّم بيخلق قيمة حقيقية عندك — ICAN مكانك.</p>
+    </div>
+
+    <div class="seg-grid reveal">
+      <div class="seg-chip">الشركات وفِرَق L&amp;D</div>
+      <div class="seg-chip">مراكز التدريب والدبلومات</div>
+      <div class="seg-chip">الاستشاريين المستقلين</div>
+      <div class="seg-chip">المؤسسات التعليمية والجامعات</div>
+      <div class="seg-chip">المدربين المحترفين</div>
+      <div class="seg-chip">مجتمعات الأعمال</div>
+      <div class="seg-chip">حاضنات الشركات الناشئة</div>
+      <div class="seg-chip">برامج القيادة والفعاليات</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">خطوات الحجز</span>
+      <h2>من التخطيط للجلسة، في 4 خطوات بس</h2>
+      <p>الهدف إن حجز جلستك يكون بسيط، عشان تركّز أنت على المحتوى واحنا نجهّز المكان.</p>
+    </div>
+
+    <div class="process reveal">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>احجز مساحتك</h3>
+        <p>اختار الميعاد اللي يناسب برنامج التدريب بتاعك — صباحًا أو مساءً.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>جهّز جلستك</h3>
+        <p>تعال والمكان جاهز يدعم العرض بتاعك، من غير أي إعداد إضافي منك.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>قدّم بثقة</h3>
+        <p>اعرض جوه بيئة مصممة تخلّي التفاعل والمشاركة أعلى.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>اصنع أثرًا دايم</h3>
+        <p>سيب عند الحضور تجربة تعكس احترافية المحتوى اللي قدّمته.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="panel" id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">تواصل</span>
+      <h2>جاهزين نستضيف جلستك الجاية</h2>
+      <p>قولنا احتياجك، وهنرجعلك بكل التفاصيل خلال دقايق.</p>
+    </div>
+
+    <div class="contact-grid reveal">
+      <div>
+        <ul class="contact-list">
+          <li><span class="lbl">الموقع</span><span class="val">التجمع الخامس، القاهرة الجديدة</span></li>
+          <li><span class="lbl">الهاتف</span><span class="val">يُضاف رقم التواصل هنا</span></li>
+          <li><span class="lbl">واتساب</span><span class="val">يُضاف رقم الواتساب هنا</span></li>
+          <li><span class="lbl">البريد</span><span class="val">info@icanspaces.com</span></li>
+        </ul>
+        <div class="social-row">
+          <a href="https://www.facebook.com/profile.php?id=61591223792171" target="_blank" rel="noopener" aria-label="فيسبوك">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="#" aria-label="انستجرام">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          </a>
+          <a href="#" aria-label="لينكدإن">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2 3.75-2 4 0 4.7 2.6 4.7 6v6.3h-4v-5.6c0-1.35-.02-3.1-1.9-3.1-1.9 0-2.2 1.5-2.2 3v5.7H9z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h3>محتاج تأكيد سريع؟</h3>
+        <p>ابعتلنا تفاصيل الجلسة (التاريخ، العدد، والميعاد المفضّل) وهنأكدلك الحجز والسعر شامل الضريبة فورًا.</p>
+        <a href="#" class="btn btn-red">كلّمنا على واتساب</a>
+        <a href="#" class="btn btn-outline-w">اطلب معاينة للمكان</a>
+        <p class="note-placeholder">* رقم الهاتف والواتساب في هذا القسم عناصر نائبة — استبدلها ببيانات التواصل الفعلية لـ ICAN.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="data:image/png;base64,{{LOGO_B64}}" alt="ICAN">
+        <div class="footer-tag">Learn. Connect. Grow. — قاعة محاضرات وتدريب، التجمع الخامس</div>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>الموقع</h4>
+          <ul>
+            <li><a href="#why">ليه ICAN</a></li>
+            <li><a href="#services">الخدمات</a></li>
+            <li><a href="#pricing">الأسعار</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>تواصل</h4>
+          <ul>
+            <li><a href="#audience">لمين المكان ده</a></li>
+            <li><a href="#process">خطوات الحجز</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ICAN. جميع الحقوق محفوظة.</span>
+      <span>التجمع الخامس، القاهرة الجديدة</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile menu
+  const burger = document.getElementById('burgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', () => menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+  // scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // now marker on hours bar (visual range 6:00 -> 24:00 = 18h window)
+  (function(){
+    const track = document.getElementById('icanTrack');
+    const marker = document.getElementById('nowMarker');
+    const now = new Date();
+    let hours = now.getHours() + now.getMinutes()/60;
+    const start = 6, end = 24;
+    if (hours < start) hours = start;
+    if (hours > end) hours = end;
+    const pct = (hours - start) / (end - start) * 100;
+    marker.style.right = pct + '%';
+  })();
+</script>
+</body>
+</html>
