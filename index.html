@@ -1,1231 +1,930 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICAN - Premium Learning Spaces | إيكان - مساحات تعليمية متميزة</title>
-    <meta name="description" content="ICAN: مساحات تعليمية متخصصة مصممة للتدريب والورش. قاعات احترافية بتقنية حديثة في التجمع الخامس، القاهرة.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICAN | قاعات تدريب وورش عمل للإيجار بالتجمع الخامس، القاهرة</title>
+<meta name="description" content="ICAN مساحات تعليمية احترافية للتدريب والورش وورش العمل في التجمع الخامس، القاهرة الجديدة. سعة حتى 35 شخص، تقنية حديثة، أسعار شفافة شاملة الضريبة، حجز بالساعة أو اليوم.">
+<meta name="keywords" content="قاعات تدريب القاهرة, قاعة اجتماعات التجمع الخامس, حجز قاعة تدريب, training hall Cairo, meeting room New Cairo, ICAN">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#E63946">
+<link rel="canonical" href="https://icanspaces.com/">
 
-        :root {
-            --primary-red: #E63946;
-            --dark-bg: #1a1a1a;
-            --dark-gray: #2d2d2d;
-            --light-gray: #f5f5f5;
-            --text-dark: #1a1a1a;
-            --text-light: #666;
-            --white: #ffffff;
-            --accent-pink: #ff6b7a;
-        }
+<!-- Open Graph / Social -->
+<meta property="og:type" content="business.business">
+<meta property="og:site_name" content="ICAN Spaces">
+<meta property="og:title" content="ICAN | مساحات تعليمية متميزة للتدريب والورش">
+<meta property="og:description" content="قاعات تدريب احترافية بتقنية حديثة في التجمع الخامس، القاهرة. سعة حتى 35 شخص، أسعار شفافة شاملة الضريبة.">
+<meta property="og:image" content="https://icanspaces.com/logo-nav.png">
+<meta property="og:locale" content="ar_EG">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://icanspaces.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ICAN | مساحات تعليمية متميزة للتدريب والورش">
+<meta name="twitter:description" content="قاعات تدريب احترافية بتقنية حديثة في التجمع الخامس، القاهرة.">
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background: var(--white);
-        }
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="favicon-192.png">
 
-        /* Language Toggle */
-        .lang-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            display: flex;
-            gap: 8px;
-            background: var(--white);
-            padding: 8px 12px;
-            border-radius: 50px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
+<!-- Fonts: Tajawal reads well in both Arabic and Latin and gives the brand a confident, geometric voice -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
-        .lang-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 14px;
-            padding: 6px 12px;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-        }
+<!-- Structured data for local search / Google Maps -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EventVenue",
+  "name": "ICAN Spaces",
+  "alternateName": "ICAN - Premium Learning Spaces",
+  "description": "Premium training hall and workshop space for rent in Fifth Settlement, New Cairo.",
+  "image": "https://icanspaces.com/logo-nav.png",
+  "url": "https://icanspaces.com/",
+  "telephone": "+201000000000",
+  "email": "info@icanspaces.com",
+  "priceRange": "EGP 2508 - 14820",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "التجمع الخامس",
+    "addressLocality": "القاهرة الجديدة",
+    "addressRegion": "Cairo",
+    "addressCountry": "EG"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "08:00",
+    "closes": "22:00"
+  },
+  "maximumAttendeeCapacity": 35
+}
+</script>
 
-        .lang-btn.active {
-            background: var(--primary-red);
-            color: var(--white);
-        }
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        .lang-btn:hover {
-            background: var(--light-gray);
-        }
+    :root {
+        --primary-red: #E63946;
+        --dark-bg: #1a1a1a;
+        --dark-gray: #2d2d2d;
+        --light-gray: #f5f5f5;
+        --text-dark: #1a1a1a;
+        --text-light: #666;
+        --white: #ffffff;
+        --accent-pink: #ff6b7a;
+        --focus-ring: 3px solid #ffb703;
+    }
 
-        .lang-btn.active:hover {
-            background: var(--primary-red);
-        }
+    html { scroll-behavior: smooth; }
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            z-index: 900;
-            padding: 16px 40px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
+    body {
+        font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background: var(--white);
+    }
 
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    img { max-width: 100%; display: block; }
 
-        .logo {
-            font-weight: 700;
-            font-size: 24px;
-            color: var(--text-dark);
-            text-decoration: none;
-        }
+    a, button { font-family: inherit; }
 
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--primary-red);
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-weight: 700;
-            margin-right: 8px;
-        }
+    /* Accessible focus states everywhere */
+    a:focus-visible,
+    button:focus-visible,
+    .lang-btn:focus-visible {
+        outline: var(--focus-ring);
+        outline-offset: 2px;
+    }
 
+    /* Skip link */
+    .skip-link {
+        position: absolute;
+        right: 12px;
+        top: -60px;
+        background: var(--primary-red);
+        color: var(--white);
+        padding: 10px 18px;
+        border-radius: 8px;
+        z-index: 2000;
+        text-decoration: none;
+        font-weight: 700;
+        transition: top 0.2s ease;
+    }
+    .skip-link:focus { top: 12px; }
+
+    /* Language Toggle */
+    .lang-toggle {
+        position: fixed;
+        top: 16px;
+        left: 20px;
+        z-index: 1000;
+        display: flex;
+        gap: 6px;
+        background: var(--white);
+        padding: 6px;
+        border-radius: 50px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    .lang-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 13px;
+        padding: 8px 14px;
+        border-radius: 50px;
+        transition: all 0.25s ease;
+        color: var(--text-dark);
+    }
+
+    .lang-btn[aria-pressed="true"] { background: var(--primary-red); color: var(--white); }
+    .lang-btn:hover { background: var(--light-gray); }
+    .lang-btn[aria-pressed="true"]:hover { background: var(--primary-red); }
+
+    /* Navigation */
+    nav.site-nav {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        background: rgba(255,255,255,0.98);
+        backdrop-filter: blur(10px);
+        z-index: 900;
+        padding: 12px 40px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .logo {
+        font-weight: 700;
+        font-size: 20px;
+        color: var(--text-dark);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+
+    .logo img { height: 44px; width: auto; }
+
+    .logo-text { display: flex; flex-direction: column; line-height: 1.15; }
+    .logo-text small { font-size: 11px; color: var(--text-light); font-weight: 400; }
+
+    .nav-links {
+        display: flex;
+        gap: 28px;
+        list-style: none;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    .nav-links a:hover { color: var(--primary-red); }
+
+    .nav-actions { display: flex; align-items: center; gap: 14px; }
+
+    .cta-button {
+        background: var(--primary-red);
+        color: var(--white);
+        padding: 10px 22px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+    .cta-button:hover { background: #d62828; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(230,57,70,0.3); }
+
+    .nav-toggle {
+        display: none;
+        background: none;
+        border: 2px solid var(--text-dark);
+        border-radius: 8px;
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-toggle span,
+    .nav-toggle span::before,
+    .nav-toggle span::after {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: var(--text-dark);
+        position: relative;
+        transition: all 0.2s ease;
+    }
+    .nav-toggle span::before { content: ''; position: absolute; top: -6px; width: 20px; }
+    .nav-toggle span::after { content: ''; position: absolute; top: 6px; width: 20px; }
+    .nav-toggle[aria-expanded="true"] span { background: transparent; }
+    .nav-toggle[aria-expanded="true"] span::before { transform: rotate(45deg); top: 0; }
+    .nav-toggle[aria-expanded="true"] span::after { transform: rotate(-45deg); top: 0; }
+
+    /* Hero Section */
+    .hero {
+        margin-top: 76px;
+        min-height: 88vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-gray) 100%);
+        color: var(--white);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: -50%; right: -10%;
+        width: 600px; height: 600px;
+        background: var(--primary-red);
+        border-radius: 50%;
+        opacity: 0.12;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .hero::before { animation: float 7s ease-in-out infinite; }
+    }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(20px); } }
+
+    .hero-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 60px;
+        align-items: center;
+        padding: 40px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero-text h1 { font-size: 52px; line-height: 1.2; margin-bottom: 22px; font-weight: 800; }
+    .hero-text h1 .highlight { color: var(--accent-pink); }
+    .hero-text p { font-size: 18px; line-height: 1.8; margin-bottom: 30px; color: rgba(255,255,255,0.9); max-width: 55ch; }
+
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .btn-primary, .btn-secondary {
+        padding: 14px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        font-size: 16px;
+        border: none;
+    }
+    .btn-primary { background: var(--primary-red); color: var(--white); }
+    .btn-primary:hover { background: #d62828; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(230,57,70,0.4); }
+    .btn-secondary { background: transparent; color: var(--white); border: 2px solid var(--white); }
+    .btn-secondary:hover { background: var(--white); color: var(--primary-red); }
+    section .btn-secondary { color: var(--text-dark); border-color: var(--text-dark); }
+    section .btn-secondary:hover { background: var(--text-dark); color: var(--white); }
+
+    .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .stat { text-align: center; background: rgba(255,255,255,0.06); border-radius: 14px; padding: 24px 10px; }
+    .stat-number { font-size: 40px; font-weight: 800; color: var(--accent-pink); margin-bottom: 6px; }
+    .stat-label { font-size: 13px; color: rgba(255,255,255,0.85); }
+
+    section { padding: 80px 40px; max-width: 1400px; margin: 0 auto; }
+    section h2 { font-size: 40px; margin-bottom: 14px; font-weight: 800; }
+    section > p.section-lead { font-size: 17px; color: var(--text-light); max-width: 620px; margin-bottom: 44px; line-height: 1.8; }
+
+    /* Icon badges (replace emoji placeholders with brand-consistent marks) */
+    .icon-badge {
+        width: 56px; height: 56px;
+        border-radius: 14px;
+        background: rgba(230,57,70,0.1);
+        display: flex; align-items: center; justify-content: center;
+        margin-bottom: 16px;
+        flex-shrink: 0;
+    }
+    .icon-badge svg { width: 28px; height: 28px; stroke: var(--primary-red); }
+
+    /* Why ICAN */
+    #why { background: var(--light-gray); }
+    .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .why-card { background: var(--white); padding: 30px; border-radius: 12px; border-inline-start: 4px solid var(--primary-red); box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .why-card h3 { font-size: 19px; margin-bottom: 10px; }
+    .why-card p { font-size: 14px; color: var(--text-light); line-height: 1.8; }
+
+    /* Services */
+    .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .service-card { background: var(--light-gray); border-radius: 12px; padding: 32px; transition: all 0.3s ease; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(230,57,70,0.15); }
+    .service-number { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: var(--primary-red); margin-bottom: 4px; }
+    .service-card h3 { font-size: 20px; margin-bottom: 10px; font-weight: 700; }
+    .service-card p { font-size: 14.5px; line-height: 1.7; color: var(--text-light); }
+
+    /* Gallery */
+    .gallery-section { background: var(--light-gray); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .gallery-item { border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); background: var(--white); }
+    .gallery-image {
+        width: 100%; height: 190px;
+        background: linear-gradient(135deg, var(--dark-bg), var(--dark-gray));
+        display: flex; align-items: center; justify-content: center;
+    }
+    .gallery-image svg { width: 56px; height: 56px; stroke: var(--accent-pink); }
+    .gallery-info { padding: 18px; }
+    .gallery-info h3 { font-weight: 700; margin-bottom: 6px; font-size: 16px; }
+    .gallery-info p { font-size: 13px; color: var(--text-light); }
+    .gallery-note { font-size: 12px; color: var(--text-light); margin-top: 18px; }
+
+    /* Pricing */
+    #pricing { background: var(--white); }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .pricing-card { background: var(--light-gray); padding: 36px 30px; border-radius: 14px; text-align: center; position: relative; transition: all 0.3s ease; border: 2px solid transparent; }
+    .pricing-card.featured { border-color: var(--primary-red); background: var(--white); box-shadow: 0 10px 30px rgba(230,57,70,0.12); }
+    .pricing-card:hover { box-shadow: 0 12px 28px rgba(0,0,0,0.1); }
+    .badge { background: var(--primary-red); color: var(--white); padding: 6px 14px; border-radius: 50px; font-size: 12px; font-weight: 700; display: inline-block; margin-bottom: 14px; }
+    .pricing-card h3 { font-size: 20px; margin-bottom: 8px; font-weight: 700; }
+    .price { font-size: 38px; font-weight: 800; color: var(--primary-red); margin: 10px 0 2px; }
+    .price small { font-size: 15px; font-weight: 600; color: var(--text-light); }
+    .price-note { font-size: 12px; color: var(--text-light); margin-bottom: 22px; }
+    .features { text-align: start; list-style: none; margin-bottom: 28px; font-size: 14px; }
+    .features li { padding: 8px 0; color: var(--text-light); border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; gap: 8px; align-items: flex-start; }
+    .features li svg { width: 16px; height: 16px; stroke: var(--primary-red); flex-shrink: 0; margin-top: 3px; }
+    .pricing-card .btn-primary { width: 100%; }
+
+    /* Experience */
+    .experience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .experience-item { text-align: center; padding: 32px 24px; border-radius: 14px; background: var(--light-gray); transition: all 0.3s ease; }
+    .experience-item:hover { background: var(--primary-red); color: var(--white); transform: translateY(-5px); }
+    .experience-item .icon-badge { margin: 0 auto 16px; background: rgba(230,57,70,0.15); }
+    .experience-item:hover .icon-badge { background: rgba(255,255,255,0.2); }
+    .experience-item:hover .icon-badge svg { stroke: var(--white); }
+    .experience-item h3 { font-size: 17px; margin-bottom: 8px; font-weight: 700; }
+    .experience-item p { font-size: 14px; line-height: 1.6; }
+
+    /* Process */
+    #process { background: var(--light-gray); }
+    .process-timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+    .process-step { background: var(--white); padding: 30px 22px; border-radius: 14px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); position: relative; }
+    .step-number { width: 46px; height: 46px; background: var(--primary-red); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; margin: 0 auto 14px; }
+    .process-step h3 { font-size: 17px; margin-bottom: 8px; font-weight: 700; }
+    .process-step p { font-size: 13.5px; color: var(--text-light); line-height: 1.6; }
+
+    /* Contact */
+    #contact { background: linear-gradient(135deg, var(--dark-bg), var(--dark-gray)); color: var(--white); text-align: center; }
+    #contact h2, #contact p.section-lead { color: rgba(255,255,255,0.95); }
+    .contact-info { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin: 44px auto 0; text-align: start; padding: 36px; background: rgba(255,255,255,0.06); border-radius: 14px; max-width: 900px; }
+    .contact-item h3 { font-size: 17px; margin-bottom: 12px; font-weight: 700; }
+    .contact-item p { font-size: 14px; color: rgba(255,255,255,0.9); line-height: 1.9; }
+    .contact-item a { color: var(--accent-pink); text-decoration: none; }
+    .contact-item a:hover { text-decoration: underline; }
+    .contact-buttons { display: flex; gap: 16px; justify-content: center; margin-top: 30px; flex-wrap: wrap; }
+
+    footer { background: var(--text-dark); color: var(--white); padding: 36px 20px; text-align: center; font-size: 14px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .tagline { color: var(--accent-pink); font-weight: 700; margin-top: 12px; }
+    footer p.fine { margin-top: 14px; font-size: 12px; color: rgba(255,255,255,0.55); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+        .hero-content { grid-template-columns: 1fr; }
+        .why-grid, .services-grid { grid-template-columns: 1fr; }
+        .gallery-grid, .experience-grid, .pricing-grid { grid-template-columns: 1fr 1fr; }
+        .process-timeline { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+        nav.site-nav { padding: 10px 16px; }
+        .nav-toggle { display: flex; }
         .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-red);
-        }
-
-        .cta-button {
-            background: var(--primary-red);
-            color: var(--white);
-            padding: 10px 24px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .cta-button:hover {
-            background: #d62828;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
-        }
-
-        /* Hero Section */
-        .hero {
-            margin-top: 80px;
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-gray) 100%);
-            color: var(--white);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
             position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 600px;
-            height: 600px;
-            background: var(--primary-red);
-            border-radius: 50%;
-            opacity: 0.1;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(20px); }
-        }
-
-        .hero-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            padding: 40px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-text h1 {
-            font-size: 56px;
-            line-height: 1.2;
-            margin-bottom: 24px;
-            font-weight: 700;
-        }
-
-        .hero-text h1 .highlight {
-            color: var(--accent-pink);
-        }
-
-        .hero-text p {
-            font-size: 18px;
-            line-height: 1.8;
-            margin-bottom: 32px;
-            color: rgba(255,255,255,0.9);
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            background: var(--primary-red);
-            color: var(--white);
-            padding: 14px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .btn-primary:hover {
-            background: #d62828;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(230, 57, 70, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--white);
-            padding: 14px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            border: 2px solid var(--white);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 16px;
-        }
-
-        .btn-secondary:hover {
+            top: 100%; left: 0; right: 0;
             background: var(--white);
-            color: var(--primary-red);
-        }
-
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-            margin-top: 48px;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 48px;
-            font-weight: 700;
-            color: var(--accent-pink);
-            margin-bottom: 8px;
-        }
-
-        .stat-label {
-            font-size: 14px;
-            color: rgba(255,255,255,0.8);
-        }
-
-        /* Section Styling */
-        section {
-            padding: 80px 40px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        section h2 {
-            font-size: 44px;
-            margin-bottom: 16px;
-            font-weight: 700;
-            color: var(--text-dark);
-        }
-
-        section > p {
-            font-size: 18px;
-            color: var(--text-light);
-            max-width: 600px;
-            margin-bottom: 48px;
-            line-height: 1.8;
-        }
-
-        /* Why ICAN Section */
-        #why {
-            background: var(--light-gray);
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-            margin-top: 32px;
-        }
-
-        .why-card {
-            background: var(--white);
-            padding: 32px;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary-red);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .why-card h3 {
-            font-size: 20px;
-            margin-bottom: 12px;
-            color: var(--text-dark);
-        }
-
-        .why-card p {
-            font-size: 14px;
-            color: var(--text-light);
-            line-height: 1.8;
-        }
-
-        /* Services Section */
-        #services {
-            background: var(--white);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 32px;
-            margin-top: 32px;
-        }
-
-        .service-card {
-            background: var(--light-gray);
-            padding: 40px;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover {
-            background: var(--primary-red);
-            color: var(--white);
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(230, 57, 70, 0.2);
-        }
-
-        .service-number {
-            font-size: 48px;
-            font-weight: 700;
-            color: var(--primary-red);
-            margin-bottom: 16px;
-        }
-
-        .service-card:hover .service-number {
-            color: var(--white);
-        }
-
-        .service-card h3 {
-            font-size: 22px;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .service-card p {
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        /* Pricing Section */
-        #pricing {
-            background: var(--light-gray);
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-            margin-top: 32px;
-        }
-
-        .pricing-card {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .pricing-card.featured {
-            border: 2px solid var(--primary-red);
-            transform: scale(1.05);
-        }
-
-        .pricing-card:hover {
-            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-        }
-
-        .badge {
-            background: var(--primary-red);
-            color: var(--white);
-            padding: 6px 12px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 16px;
-        }
-
-        .pricing-card h3 {
-            font-size: 22px;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .price {
-            font-size: 42px;
-            font-weight: 700;
-            color: var(--primary-red);
-            margin: 16px 0;
-        }
-
-        .price-note {
-            font-size: 12px;
-            color: var(--text-light);
-            margin-bottom: 24px;
-        }
-
-        .features {
-            text-align: left;
-            list-style: none;
-            margin-bottom: 32px;
-            font-size: 14px;
-        }
-
-        .features li {
-            padding: 8px 0;
-            color: var(--text-light);
-            border-bottom: 1px solid var(--light-gray);
-        }
-
-        .features li:before {
-            content: "✓ ";
-            color: var(--primary-red);
-            font-weight: 700;
-            margin-right: 8px;
-        }
-
-        /* Experience Highlights */
-        #experience {
-            background: var(--white);
-        }
-
-        .experience-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-            margin-top: 32px;
-        }
-
-        .experience-item {
-            text-align: center;
-            padding: 32px;
-            border-radius: 12px;
-            background: var(--light-gray);
-            transition: all 0.3s ease;
-        }
-
-        .experience-item:hover {
-            background: var(--primary-red);
-            color: var(--white);
-            transform: translateY(-5px);
-        }
-
-        .experience-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--primary-red);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            margin: 0 auto 16px;
-            color: var(--white);
-        }
-
-        .experience-item:hover .experience-icon {
-            background: var(--white);
-            color: var(--primary-red);
-        }
-
-        .experience-item h3 {
-            font-size: 18px;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .experience-item p {
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        /* Process Section */
-        #process {
-            background: var(--light-gray);
-        }
-
-        .process-timeline {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            margin-top: 32px;
-            position: relative;
-        }
-
-        .process-step {
-            background: var(--white);
-            padding: 32px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .step-number {
-            width: 50px;
-            height: 50px;
-            background: var(--primary-red);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 22px;
-            margin: 0 auto 16px;
-        }
-
-        .process-step h3 {
-            font-size: 18px;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .process-step p {
-            font-size: 14px;
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        /* Audience Section */
-        #audience {
-            background: var(--white);
-        }
-
-        .audience-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 32px;
-        }
-
-        .audience-item {
-            padding: 24px;
-            background: var(--light-gray);
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 500;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .audience-item:hover {
-            background: var(--primary-red);
-            color: var(--white);
-            transform: translateY(-3px);
-        }
-
-        /* Contact Section */
-        #contact {
-            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-gray) 100%);
-            color: var(--white);
-            text-align: center;
-        }
-
-        #contact h2,
-        #contact > p {
-            color: var(--white);
-        }
-
-        #contact > p {
-            color: rgba(255,255,255,0.9);
-        }
-
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 32px;
-            margin-top: 48px;
-            text-align: right;
-            padding: 40px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-        }
-
-        .contact-item h3 {
-            font-size: 18px;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .contact-item p {
-            font-size: 14px;
-            color: rgba(255,255,255,0.9);
-            line-height: 1.8;
-        }
-
-        .contact-buttons {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            margin-top: 32px;
-            flex-wrap: wrap;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--text-dark);
-            color: var(--white);
-            padding: 40px;
-            text-align: center;
-            font-size: 14px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .tagline {
-            color: var(--accent-pink);
-            font-weight: 600;
-            margin-top: 16px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            nav {
-                padding: 12px 20px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero {
-                margin-top: 60px;
-                min-height: auto;
-            }
-
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                padding: 20px;
-            }
-
-            .hero-text h1 {
-                font-size: 36px;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .btn-primary,
-            .btn-secondary {
-                width: 100%;
-                text-align: center;
-            }
-
-            .hero-stats {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            section {
-                padding: 40px 20px;
-            }
-
-            section h2 {
-                font-size: 32px;
-            }
-
-            .why-grid,
-            .services-grid,
-            .audience-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .pricing-card.featured {
-                transform: scale(1);
-            }
-
-            .experience-grid,
-            .process-timeline {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-info {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .lang-toggle {
-                top: 60px;
-            }
-        }
-
-        /* Hidden content for English */
-        [data-lang="ar"] {
-            display: block;
-        }
-
-        [data-lang="en"] {
-            display: none;
-        }
-
-        body.lang-en [data-lang="ar"] {
-            display: none;
-        }
-
-        body.lang-en [data-lang="en"] {
-            display: block;
-        }
-
-        body.lang-en {
-            direction: ltr;
-            text-align: left;
-        }
-
-        body.lang-en section {
-            text-align: left;
-        }
-
-        body.lang-en .contact-info {
-            text-align: left;
-        }
-
-        body.lang-en .stat,
-        body.lang-en .experience-item,
-        body.lang-en .process-step {
-            text-align: center;
-        }
-    </style>
+            flex-direction: column;
+            gap: 0;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .nav-links.open { max-height: 320px; }
+        .nav-links li { border-bottom: 1px solid var(--light-gray); }
+        .nav-links a { display: block; padding: 14px 24px; }
+        .nav-actions .cta-button { display: none; }
+
+        .hero { margin-top: 64px; min-height: auto; padding: 20px 0; }
+        .hero-text h1 { font-size: 32px; }
+        .hero-buttons { flex-direction: column; }
+        .btn-primary, .btn-secondary { width: 100%; text-align: center; }
+        .hero-stats { grid-template-columns: 1fr; }
+
+        section { padding: 48px 20px; }
+        section h2 { font-size: 28px; }
+
+        .why-grid, .services-grid, .experience-grid, .gallery-grid, .pricing-grid, .process-timeline { grid-template-columns: 1fr; }
+        .pricing-card.featured { order: -1; }
+        .contact-info { grid-template-columns: 1fr; text-align: center; }
+        .lang-toggle { top: 12px; left: 12px; }
+        .logo img { height: 36px; }
+        .logo-text strong { font-size: 15px; }
+        .logo-text small { font-size: 10px; }
+    }
+</style>
 </head>
 <body>
-    <!-- Language Toggle -->
-    <div class="lang-toggle">
-        <button class="lang-btn active" data-lang="ar">العربية</button>
-        <button class="lang-btn" data-lang="en">English</button>
-    </div>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <span class="logo-icon">🎯</span>
-                <span data-lang="ar">ICAN</span>
-                <span data-lang="en" style="display:none;">ICAN</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#why" data-lang="ar">لماذا ICAN</a><a href="#why" data-lang="en" style="display:none;">Why ICAN</a></li>
-                <li><a href="#services" data-lang="ar">الخدمات</a><a href="#services" data-lang="en" style="display:none;">Services</a></li>
-                <li><a href="#pricing" data-lang="ar">الأسعار</a><a href="#pricing" data-lang="en" style="display:none;">Pricing</a></li>
-                <li><a href="#process" data-lang="ar">الخطوات</a><a href="#process" data-lang="en" style="display:none;">Process</a></li>
-                <li><a href="#contact" data-lang="ar">تواصل معنا</a><a href="#contact" data-lang="en" style="display:none;">Contact</a></li>
-            </ul>
-            <button class="cta-button" data-lang="ar">احجز الآن</button>
-            <button class="cta-button" data-lang="en" style="display:none;">Book Now</button>
+<a href="#main" class="skip-link" data-i18n="skipLink">تخطي إلى المحتوى</a>
+
+<!-- Language Toggle -->
+<div class="lang-toggle" role="group" aria-label="اختيار اللغة / Language">
+    <button class="lang-btn" data-lang="ar" aria-pressed="true">العربية</button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false">English</button>
+</div>
+
+<!-- Navigation -->
+<nav class="site-nav">
+    <div class="nav-container">
+        <a href="#main" class="logo" aria-label="ICAN — الصفحة الرئيسية">
+            <img src="logo-nav.png" alt="ICAN logo" width="120" height="77">
+            <span class="logo-text">
+                <strong>ICAN</strong>
+                <small data-i18n="logoTagline">Premium Learning Spaces</small>
+            </span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#why" data-i18n="navWhy">لماذا ICAN</a></li>
+            <li><a href="#services" data-i18n="navServices">الخدمات</a></li>
+            <li><a href="#gallery" data-i18n="navGallery">المكان</a></li>
+            <li><a href="#pricing" data-i18n="navPricing">الأسعار</a></li>
+            <li><a href="#contact" data-i18n="navContact">تواصل معنا</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="cta-button js-whatsapp" data-i18n="navBook">احجز الآن</button>
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="فتح قائمة التنقل">
+                <span></span>
+            </button>
         </div>
-    </nav>
+    </div>
+</nav>
 
+<main id="main">
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <div data-lang="ar">
-                    <h1>مساحات تعليمية <span class="highlight">متخصصة</span></h1>
-                    <p>بيئة احترافية مصممة خصيصاً لنجاح جلساتك التدريبية. من الصباح إلى الليل، مع أحدث التقنيات والراحة الكاملة.</p>
-                </div>
-                <div data-lang="en" style="display:none;">
-                    <h1>Premium Learning <span class="highlight">Environments</span></h1>
-                    <p>Professional spaces designed specifically for your training success. From morning to night, with the latest technology and complete comfort.</p>
-                </div>
+                <h1 data-i18n-html="heroTitle">مساحات تعليمية <span class="highlight">متخصصة</span></h1>
+                <p data-i18n="heroText">بيئة احترافية مصممة خصيصاً لنجاح جلساتك التدريبية. من الصباح إلى الليل، مع أحدث التقنيات والراحة الكاملة.</p>
                 <div class="hero-buttons">
-                    <button class="btn-primary" data-lang="ar">احجز الآن</button>
-                    <button class="btn-primary" data-lang="en" style="display:none;">Book Now</button>
-                    <button class="btn-secondary" data-lang="ar">معاينة مجانية</button>
-                    <button class="btn-secondary" data-lang="en" style="display:none;">Free Tour</button>
+                    <button class="btn-primary js-whatsapp" data-i18n="heroBook">احجز الآن</button>
+                    <button class="btn-secondary js-whatsapp" data-message-key="tourMsg" data-i18n="heroTour">معاينة مجانية</button>
                 </div>
             </div>
             <div class="hero-stats">
                 <div class="stat">
-                    <div class="stat-number" data-lang="ar">35</div>
-                    <div class="stat-number" data-lang="en" style="display:none;">35</div>
-                    <div class="stat-label" data-lang="ar">سعة القاعة الأساسية</div>
-                    <div class="stat-label" data-lang="en" style="display:none;">Hall Capacity</div>
+                    <div class="stat-number">35</div>
+                    <div class="stat-label" data-i18n="statCapacity">سعة القاعة الأساسية</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number" data-lang="ar">14ساعة</div>
-                    <div class="stat-number" data-lang="en" style="display:none;">14hrs</div>
-                    <div class="stat-label" data-lang="ar">ساعات التشغيل يومياً</div>
-                    <div class="stat-label" data-lang="en" style="display:none;">Daily Operation</div>
+                    <div class="stat-number" data-i18n="statHoursNum">14 ساعة</div>
+                    <div class="stat-label" data-i18n="statHours">ساعات التشغيل يومياً</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number" data-lang="ar">100%</div>
-                    <div class="stat-number" data-lang="en" style="display:none;">100%</div>
-                    <div class="stat-label" data-lang="ar">شفافية الأسعار</div>
-                    <div class="stat-label" data-lang="en" style="display:none;">Price Transparency</div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label" data-i18n="statPrice">شفافية الأسعار</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Why ICAN -->
-    <section id="why">
-        <h2 data-lang="ar">لماذا اختيار ICAN؟</h2>
-        <h2 data-lang="en" style="display:none;">Why Choose ICAN?</h2>
-        <p data-lang="ar">كل تفصيلة في المكان مصممة بغرض واحد: جعل جلستك التدريبية ناجحة ومؤثرة</p>
-        <p data-lang="en" style="display:none;">Every detail is designed with one purpose: making your training session successful and impactful</p>
-        
+    <section id="why" aria-labelledby="why-heading">
+        <h2 id="why-heading" data-i18n="whyHeading">لماذا اختيار ICAN؟</h2>
+        <p class="section-lead" data-i18n="whyLead">كل تفصيلة في المكان مصممة بغرض واحد: جعل جلستك التدريبية ناجحة ومؤثرة</p>
         <div class="why-grid">
             <div class="why-card">
-                <h3 data-lang="ar">🎯 مساحة متخصصة</h3>
-                <h3 data-lang="en" style="display:none;">🎯 Specialized Space</h3>
-                <p data-lang="ar">ليست غرفة اجتماعات عادية. كل شيء مصمم من البداية للتدريب والتعليم، مما يخلق بيئة تفاعلية مثالية.</p>
-                <p data-lang="en" style="display:none;">Not just another meeting room. Everything is designed from the ground up for training and learning, creating the perfect interactive environment.</p>
+                <div class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.5" fill="currentColor"/></svg></div>
+                <h3 data-i18n="why1Title">مساحة متخصصة</h3>
+                <p data-i18n="why1Text">ليست غرفة اجتماعات عادية. كل شيء مصمم من البداية للتدريب والتعليم، مما يخلق بيئة تفاعلية مثالية.</p>
             </div>
             <div class="why-card">
-                <h3 data-lang="ar">📱 تقنية حديثة</h3>
-                <h3 data-lang="en" style="display:none;">📱 Modern Technology</h3>
-                <p data-lang="ar">شاشة تفاعلية عملاقة، نظام صوتي احترافي، واتصال إنترنت فائق السرعة لعروضك التقديمية.</p>
-                <p data-lang="en" style="display:none;">Interactive displays, professional audio systems, and high-speed internet for seamless presentations.</p>
+                <div class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                <h3 data-i18n="why2Title">تقنية حديثة</h3>
+                <p data-i18n="why2Text">شاشة تفاعلية عملاقة، نظام صوتي احترافي، واتصال إنترنت فائق السرعة لعروضك التقديمية.</p>
             </div>
             <div class="why-card">
-                <h3 data-lang="ar">⏰ مرونة زمنية</h3>
-                <h3 data-lang="en" style="display:none;">⏰ Time Flexibility</h3>
-                <p data-lang="ar">من 8 صباحاً إلى 10 مساءً. بدون تكاليف إضافية أو شروط مخفية. السعر واحد سواء صباح أو مساء.</p>
-                <p data-lang="en" style="display:none;">From 8 AM to 10 PM. No hidden fees or additional charges. Same price whether morning or evening.</p>
+                <div class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+                <h3 data-i18n="why3Title">مرونة زمنية</h3>
+                <p data-i18n="why3Text">من 8 صباحاً إلى 10 مساءً. بدون تكاليف إضافية أو شروط مخفية. السعر واحد سواء صباح أو مساء.</p>
             </div>
             <div class="why-card">
-                <h3 data-lang="ar">💰 شفافية كاملة</h3>
-                <h3 data-lang="en" style="display:none;">💰 Complete Transparency</h3>
-                <p data-lang="ar">السعر شامل الضريبة من اللحظة الأولى. بدون مفاجآت. بدون رسوم مخفية. بدون شروط غير واضحة.</p>
-                <p data-lang="en" style="display:none;">Price includes tax from the start. No surprises. No hidden fees. No unclear conditions.</p>
-            </div>
-            <div class="why-card">
-                <h3 data-lang="ar">🤝 دعم احترافي</h3>
-                <h3 data-lang="en" style="display:none;">🤝 Professional Support</h3>
-                <p data-lang="ar">فريق متخصص حاضر طول جلستك، يضمن أن كل شيء يعمل بكفاءة ولا شيء يشتت انتباهك.</p>
-                <p data-lang="en" style="display:none;">Dedicated team throughout your session, ensuring everything runs smoothly without any distractions.</p>
-            </div>
-            <div class="why-card">
-                <h3 data-lang="ar">📍 موقع استراتيجي</h3>
-                <h3 data-lang="en" style="display:none;">📍 Strategic Location</h3>
-                <p data-lang="ar">في قلب التجمع الخامس. يسهل الوصول إليها من جميع أنحاء القاهرة الجديدة مع ساحة انتظار سيارات واسعة.</p>
-                <p data-lang="en" style="display:none;">In the heart of Fifth Settlement. Easy to reach from anywhere in New Cairo with ample parking.</p>
+                <div class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                <h3 data-i18n="why4Title">شفافية كاملة</h3>
+                <p data-i18n="why4Text">السعر شامل الضريبة من اللحظة الأولى. بدون مفاجآت. بدون رسوم مخفية. بدون شروط غير واضحة.</p>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2 data-lang="ar">خدماتنا</h2>
-        <h2 data-lang="en" style="display:none;">Our Services</h2>
-        <p data-lang="ar">مصممة لكل شكل من أشكال التعلم المهني</p>
-        <p data-lang="en" style="display:none;">Designed for every type of professional learning</p>
-
+    <!-- Services -->
+    <section id="services" aria-labelledby="services-heading">
+        <h2 id="services-heading" data-i18n="servicesHeading">خدماتنا</h2>
+        <p class="section-lead" data-i18n="servicesLead">مصممة لكل شكل من أشكال التعلم المهني</p>
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-number">01</div>
-                <h3 data-lang="ar">التدريب الداخلي</h3>
-                <h3 data-lang="en" style="display:none;">Corporate Training</h3>
-                <p data-lang="ar">بيئة احترافية لبرامج تدريب الموظفين وتأهيل الكوادر الجديدة ومبادرات التطوير والتعلم.</p>
-                <p data-lang="en" style="display:none;">Professional environment for employee training, onboarding programs, and L&D initiatives.</p>
+                <h3 data-i18n="service1Title">التدريب الداخلي</h3>
+                <p data-i18n="service1Text">بيئة احترافية لبرامج تدريب الموظفين وتأهيل الكوادر الجديدة ومبادرات التطوير والتعلم.</p>
             </div>
             <div class="service-card">
                 <div class="service-number">02</div>
-                <h3 data-lang="ar">ورش العمل</h3>
-                <h3 data-lang="en" style="display:none;">Workshops</h3>
-                <p data-lang="ar">مساحة مصممة تشجع التفاعل والمشاركة الجماعية والتدريب العملي والنقاش المباشر.</p>
-                <p data-lang="en" style="display:none;">Purpose-built spaces encouraging interaction, participation, collaboration, and hands-on learning.</p>
+                <h3 data-i18n="service2Title">ورش العمل</h3>
+                <p data-i18n="service2Text">مساحة مصممة تشجع التفاعل والمشاركة الجماعية والتدريب العملي والنقاش المباشر.</p>
             </div>
             <div class="service-card">
                 <div class="service-number">03</div>
-                <h3 data-lang="ar">الندوات المهنية</h3>
-                <h3 data-lang="en" style="display:none;">Professional Seminars</h3>
-                <p data-lang="ar">قدم عرضك التقديمي بثقة في بيئة تعكس احترافية شركتك وتؤثر على الحضور.</p>
-                <p data-lang="en" style="display:none;">Present with confidence in an environment reflecting your organization's professionalism.</p>
+                <h3 data-i18n="service3Title">الندوات المهنية</h3>
+                <p data-i18n="service3Text">قدم عرضك التقديمي بثقة في بيئة تعكس احترافية شركتك وتؤثر على الحضور.</p>
             </div>
             <div class="service-card">
                 <div class="service-number">04</div>
-                <h3 data-lang="ar">البرامج التعليمية</h3>
-                <h3 data-lang="en" style="display:none;">Educational Programs</h3>
-                <p data-lang="ar">مساحة حديثة تدعم المدربين والمؤسسات التعليمية في تقديم محتوى تعليمي مؤثر.</p>
-                <p data-lang="en" style="display:none;">Modern space supporting instructors and educational institutions in delivering impactful content.</p>
+                <h3 data-i18n="service4Title">البرامج التعليمية</h3>
+                <p data-i18n="service4Text">مساحة حديثة تدعم المدربين والمؤسسات التعليمية في تقديم محتوى تعليمي مؤثر.</p>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing">
-        <h2 data-lang="ar">الأسعار والباقات</h2>
-        <h2 data-lang="en" style="display:none;">Pricing & Packages</h2>
-        <p data-lang="ar">سعر واضح وشفاف، شامل الضريبة من اللحظة الأولى</p>
-        <p data-lang="en" style="display:none;">Clear and transparent pricing, including tax from the start</p>
+    <!-- Gallery -->
+    <section id="gallery" class="gallery-section" aria-labelledby="gallery-heading">
+        <h2 id="gallery-heading" data-i18n="galleryHeading">صور المكان</h2>
+        <p class="section-lead" data-i18n="galleryLead">تجول داخل قاعات ICAN المتميزة والحديثة</p>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="gallery-image" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15l4-4 4 4 4-6 6 6"/></svg></div>
+                <div class="gallery-info">
+                    <h3 data-i18n="gallery1Title">القاعة الرئيسية</h3>
+                    <p data-i18n="gallery1Text">سعة 35 شخص بتقنية عرض متقدمة</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-image" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                <div class="gallery-info">
+                    <h3 data-i18n="gallery2Title">قاعة التدريب العملي</h3>
+                    <p data-i18n="gallery2Text">مجهزة بأحدث الأجهزة والمعدات</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-image" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h13v4a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-4z"/><path d="M17 11h2a2 2 0 0 1 0 4h-2M6 3c0 1-1 1-1 2s1 1 1 2M10 3c0 1-1 1-1 2s1 1 1 2"/></svg></div>
+                <div class="gallery-info">
+                    <h3 data-i18n="gallery3Title">منطقة الاستراحة</h3>
+                    <p data-i18n="gallery3Text">مريحة وهادئة لاستراحة احترافية</p>
+                </div>
+            </div>
+        </div>
+        <p class="gallery-note" data-i18n="galleryNote">* يُنصح باستبدال هذه الرسومات التوضيحية بصور فوتوغرافية حقيقية للقاعات لرفع معدل الحجز.</p>
+    </section>
 
+    <!-- Pricing -->
+    <section id="pricing" aria-labelledby="pricing-heading">
+        <h2 id="pricing-heading" data-i18n="pricingHeading">الأسعار والباقات</h2>
+        <p class="section-lead" data-i18n="pricingLead">سعر واضح وشفاف، شامل الضريبة من اللحظة الأولى</p>
         <div class="pricing-grid">
             <div class="pricing-card">
-                <h3 data-lang="ar">بالساعة</h3>
-                <h3 data-lang="en" style="display:none;">Hourly</h3>
-                <div class="price" data-lang="ar">2,508</div>
-                <div class="price" data-lang="en" style="display:none;">$75</div>
-                <div class="price-note" data-lang="ar">شامل الضريبة (14%)</div>
-                <div class="price-note" data-lang="en" style="display:none;">Tax Included</div>
+                <h3 data-i18n="price1Title">بالساعة</h3>
+                <div class="price">2,508 <small data-i18n="egp">ج.م</small></div>
+                <div class="price-note" data-i18n="taxNote">شامل الضريبة (14%)</div>
                 <ul class="features">
-                    <li data-lang="ar">سعة حتى 35 شخص</li>
-                    <li data-lang="en" style="display:none;">Up to 35 people</li>
-                    <li data-lang="ar">الشاشة التفاعلية والصوت</li>
-                    <li data-lang="en" style="display:none;">Interactive display & audio</li>
-                    <li data-lang="ar">واي فاي عالي السرعة</li>
-                    <li data-lang="en" style="display:none;">High-speed WiFi</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="feat1">سعة حتى 35 شخص</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="feat2">الشاشة التفاعلية والصوت</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="feat3">واي فاي عالي السرعة</span></li>
                 </ul>
-                <button class="btn-primary" data-lang="ar">احجز</button>
-                <button class="btn-primary" data-lang="en" style="display:none;">Book</button>
+                <button class="btn-primary js-whatsapp" data-message-key="bookHourly" data-i18n="bookBtn">احجز</button>
             </div>
 
             <div class="pricing-card featured">
-                <span class="badge" data-lang="ar">الأكثر طلباً</span>
-                <span class="badge" data-lang="en" style="display:none;">Most Popular</span>
-                <h3 data-lang="ar">نصف يوم</h3>
-                <h3 data-lang="en" style="display:none;">Half Day</h3>
-                <div class="price" data-lang="ar">8,550</div>
-                <div class="price" data-lang="en" style="display:none;">$256</div>
-                <div class="price-note" data-lang="ar">4 ساعات متواصلة</div>
-                <div class="price-note" data-lang="en" style="display:none;">4 Continuous Hours</div>
+                <span class="badge" data-i18n="popularBadge">الأكثر طلباً</span>
+                <h3 data-i18n="price2Title">نصف يوم</h3>
+                <div class="price">8,550 <small data-i18n="egp">ج.م</small></div>
+                <div class="price-note" data-i18n="price2Note">4 ساعات متواصلة</div>
                 <ul class="features">
-                    <li data-lang="ar">كل المزايا السابقة</li>
-                    <li data-lang="en" style="display:none;">All previous benefits</li>
-                    <li data-lang="ar">استراحة قهوة وشاي</li>
-                    <li data-lang="en" style="display:none;">Coffee & tea break</li>
-                    <li data-lang="ar">دعم فني حاضر</li>
-                    <li data-lang="en" style="display:none;">Technical support</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="feat4">كل المزايا السابقة</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="feat5">استراحة قهوة وشاي</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="feat6">دعم فني حاضر</span></li>
                 </ul>
-                <button class="btn-primary" data-lang="ar">احجز</button>
-                <button class="btn-primary" data-lang="en" style="display:none;">Book</button>
+                <button class="btn-primary js-whatsapp" data-message-key="bookHalf" data-i18n="bookBtn">احجز</button>
             </div>
 
             <div class="pricing-card">
-                <h3 data-lang="ar">يوم كامل</h3>
-                <h3 data-lang="en" style="display:none;">Full Day</h3>
-                <div class="price" data-lang="ar">14,820</div>
-                <div class="price" data-lang="en" style="display:none;">$444</div>
-                <div class="price-note" data-lang="ar">8 ساعات متواصلة</div>
-                <div class="price-note" data-lang="en" style="display:none;">8 Continuous Hours</div>
+                <h3 data-i18n="price3Title">يوم كامل</h3>
+                <div class="price">14,820 <small data-i18n="egp">ج.م</small></div>
+                <div class="price-note" data-i18n="price3Note">8 ساعات متواصلة</div>
                 <ul class="features">
-                    <li data-lang="ar">أفضل سعر للساعة</li>
-                    <li data-lang="en" style="display:none;">Best hourly rate</li>
-                    <li data-lang="ar">استراحتين + غداء</li>
-                    <li data-lang="en" style="display:none;">2 breaks + lunch</li>
-                    <li data-lang="ar">ترتيب مرن للقاعة</li>
-                    <li data-lang="en" style="display:none;">Flexible setup</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="feat7">أفضل سعر للساعة</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="feat8">استراحتين + غداء</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="feat9">ترتيب مرن للقاعة</span></li>
                 </ul>
-                <button class="btn-primary" data-lang="ar">احجز</button>
-                <button class="btn-primary" data-lang="en" style="display:none;">Book</button>
+                <button class="btn-primary js-whatsapp" data-message-key="bookFull" data-i18n="bookBtn">احجز</button>
             </div>
         </div>
     </section>
 
-    <!-- Experience Highlights -->
-    <section id="experience">
-        <h2 data-lang="ar">تجربة ICAN</h2>
-        <h2 data-lang="en" style="display:none;">The ICAN Experience</h2>
-        <p data-lang="ar">أكثر من مجرد قاعة. رحلة تعليمية احترافية تدعم نجاحك</p>
-        <p data-lang="en" style="display:none;">More than just a room. A professional learning journey supporting your success</p>
-
+    <!-- Experience -->
+    <section id="experience" aria-labelledby="experience-heading">
+        <h2 id="experience-heading" data-i18n="expHeading">تجربة ICAN</h2>
+        <p class="section-lead" data-i18n="expLead">أكثر من مجرد قاعة. رحلة تعليمية احترافية تدعم نجاحك</p>
         <div class="experience-grid">
             <div class="experience-item">
-                <div class="experience-icon">🏢</div>
-                <h3 data-lang="ar">بيئة احترافية</h3>
-                <h3 data-lang="en" style="display:none;">Professional Environment</h3>
-                <p data-lang="ar">مصممة لإنشاء الانطباع الأول الرائع لحضورك</p>
-                <p data-lang="en" style="display:none;">Designed to create an excellent first impression</p>
+                <div class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+                <h3 data-i18n="exp1Title">بيئة احترافية</h3>
+                <p data-i18n="exp1Text">مصممة لإنشاء الانطباع الأول الرائع لحضورك</p>
             </div>
             <div class="experience-item">
-                <div class="experience-icon">📊</div>
-                <h3 data-lang="ar">عروض تفاعلية</h3>
-                <h3 data-lang="en" style="display:none;">Interactive Presentations</h3>
-                <p data-lang="ar">شاشة عملاقة وتقنية تجعل كل عرض أكثر وضوحاً وتأثيراً</p>
-                <p data-lang="en" style="display:none;">Giant screen and technology making presentations clearer and more impactful</p>
+                <div class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M7 10l3 3 3-4 4 5"/></svg></div>
+                <h3 data-i18n="exp2Title">عروض تفاعلية</h3>
+                <p data-i18n="exp2Text">شاشة عملاقة وتقنية تجعل كل عرض أكثر وضوحاً وتأثيراً</p>
             </div>
             <div class="experience-item">
-                <div class="experience-icon">🛋️</div>
-                <h3 data-lang="ar">راحة كاملة</h3>
-                <h3 data-lang="en" style="display:none;">Complete Comfort</h3>
-                <p data-lang="ar">كراسي ومساحات مصممة لجلسات طويلة دون إرهاق</p>
-                <p data-lang="en" style="display:none;">Seating and spaces designed for extended sessions</p>
+                <div class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18v-6a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v6M2 18h20M6 12V9M18 12V9"/></svg></div>
+                <h3 data-i18n="exp3Title">راحة كاملة</h3>
+                <p data-i18n="exp3Text">كراسي ومساحات مصممة لجلسات طويلة دون إرهاق</p>
             </div>
             <div class="experience-item">
-                <div class="experience-icon">🔧</div>
-                <h3 data-lang="ar">تقنية موثوقة</h3>
-                <h3 data-lang="en" style="display:none;">Reliable Technology</h3>
-                <p data-lang="ar">كل شيء محدث واختبر، مع دعم فني متفرغ</p>
-                <p data-lang="en" style="display:none;">Everything updated and tested with dedicated support</p>
+                <div class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></div>
+                <h3 data-i18n="exp4Title">تقنية موثوقة</h3>
+                <p data-i18n="exp4Text">كل شيء محدث واختبر، مع دعم فني متفرغ</p>
             </div>
             <div class="experience-item">
-                <div class="experience-icon">✨</div>
-                <h3 data-lang="ar">جو منظم</h3>
-                <h3 data-lang="en" style="display:none;">Focused Atmosphere</h3>
-                <p data-lang="ar">خالية من الانقطاعات والتشويشات البيئية</p>
-                <p data-lang="en" style="display:none;">Free from distractions and environmental noise</p>
+                <div class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 4.9 5.3.6-4 3.7 1.1 5.3L12 14.9 7.4 17.5l1.1-5.3-4-3.7 5.3-.6z"/></svg></div>
+                <h3 data-i18n="exp5Title">جو منظم</h3>
+                <p data-i18n="exp5Text">خالية من الانقطاعات والتشويشات البيئية</p>
             </div>
             <div class="experience-item">
-                <div class="experience-icon">🎁</div>
-                <h3 data-lang="ar">خدمة متميزة</h3>
-                <h3 data-lang="en" style="display:none;">Exceptional Service</h3>
-                <p data-lang="ar">فريق احترافي يهتم بكل التفاصيل الصغيرة</p>
-                <p data-lang="en" style="display:none;">Professional team caring for every detail</p>
+                <div class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v8H4v-8M2 7h20v5H2zM12 7v13M12 7c-1-3-6-3-6 0s5 0 6 0M12 7c1-3 6-3 6 0s-5 0-6 0"/></svg></div>
+                <h3 data-i18n="exp6Title">خدمة متميزة</h3>
+                <p data-i18n="exp6Text">فريق احترافي يهتم بكل التفاصيل الصغيرة</p>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section id="process">
-        <h2 data-lang="ar">خطوات الحجز</h2>
-        <h2 data-lang="en" style="display:none;">Booking Process</h2>
-        <p data-lang="ar">أربع خطوات بسيطة من التخطيط حتى النجاح</p>
-        <p data-lang="en" style="display:none;">Four simple steps from planning to success</p>
-
-        <div class="process-timeline">
-            <div class="process-step">
+    <!-- Process -->
+    <section id="process" aria-labelledby="process-heading">
+        <h2 id="process-heading" data-i18n="processHeading">خطوات الحجز</h2>
+        <p class="section-lead" data-i18n="processLead">أربع خطوات بسيطة من التخطيط حتى النجاح</p>
+        <ol class="process-timeline" style="list-style: none;">
+            <li class="process-step">
                 <div class="step-number">1</div>
-                <h3 data-lang="ar">احجز مساحتك</h3>
-                <h3 data-lang="en" style="display:none;">Book Your Space</h3>
-                <p data-lang="ar">اختر الميعاد والباقة المناسبة لاحتياجاتك</p>
-                <p data-lang="en" style="display:none;">Choose your preferred time and package</p>
-            </div>
-            <div class="process-step">
+                <h3 data-i18n="step1Title">احجز مساحتك</h3>
+                <p data-i18n="step1Text">اختر الميعاد والباقة المناسبة لاحتياجاتك</p>
+            </li>
+            <li class="process-step">
                 <div class="step-number">2</div>
-                <h3 data-lang="ar">جهز جلستك</h3>
-                <h3 data-lang="en" style="display:none;">Prepare Your Session</h3>
-                <p data-lang="ar">المكان جاهز لدعم كل احتياجاتك التقنية</p>
-                <p data-lang="en" style="display:none;">Everything is ready to support your needs</p>
-            </div>
-            <div class="process-step">
+                <h3 data-i18n="step2Title">جهز جلستك</h3>
+                <p data-i18n="step2Text">المكان جاهز لدعم كل احتياجاتك التقنية</p>
+            </li>
+            <li class="process-step">
                 <div class="step-number">3</div>
-                <h3 data-lang="ar">قدم بثقة</h3>
-                <h3 data-lang="en" style="display:none;">Present with Confidence</h3>
-                <p data-lang="ar">اعرض في بيئة مصممة لنجاحك وفعاليتك</p>
-                <p data-lang="en" style="display:none;">Present in a space designed for your success</p>
-            </div>
-            <div class="process-step">
+                <h3 data-i18n="step3Title">قدم بثقة</h3>
+                <p data-i18n="step3Text">اعرض في بيئة مصممة لنجاحك وفعاليتك</p>
+            </li>
+            <li class="process-step">
                 <div class="step-number">4</div>
-                <h3 data-lang="ar">اصنع أثراً دائماً</h3>
-                <h3 data-lang="en" style="display:none;">Create Lasting Impact</h3>
-                <p data-lang="ar">اترك انطباعاً احترافياً يعكس قيمة محتواك</p>
-                <p data-lang="en" style="display:none;">Leave a lasting professional impression</p>
-            </div>
-        </div>
+                <h3 data-i18n="step4Title">اصنع أثراً دائماً</h3>
+                <p data-i18n="step4Text">اترك انطباعاً احترافياً يعكس قيمة محتواك</p>
+            </li>
+        </ol>
     </section>
 
-    <!-- Audience Section -->
-    <section id="audience">
-        <h2 data-lang="ar">من نخدم</h2>
-        <h2 data-lang="en" style="display:none;">Who We Serve</h2>
-        <p data-lang="ar">لأي جهة تؤمن بأن التعلم يستاهل مكان صح</p>
-        <p data-lang="en" style="display:none;">For any organization that believes learning deserves the right space</p>
-
-        <div class="audience-grid">
-            <div class="audience-item" data-lang="ar">الشركات الكبرى</div>
-            <div class="audience-item" data-lang="en" style="display:none;">Large Corporations</div>
-
-            <div class="audience-item" data-lang="ar">فِرَق التطوير والتدريب</div>
-            <div class="audience-item" data-lang="en" style="display:none;">L&D Teams</div>
-
-            <div class="audience-item" data-lang="ar">الاستشاريون المستقلون</div>
-            <div class="audience-item" data-lang="en" style="display:none;">Independent Consultants</div>
-
-            <div class="audience-item" data-lang="ar">مراكز التدريب والدبلومات</div>
-            <div class="audience-item" data-lang="en" style="display:none;">Training Centers</div>
-
-            <div class="audience-item" data-lang="ar">المؤسسات التعليمية</div>
-            <div class="audience-item" data-lang="en" style="display:none;">Educational Institutions</div>
-
-            <div class="audience-item" data-lang="ar">المدربون المحترفون</div>
-            <div class="audience-item" data-lang="en" style="display:none;">Professional Trainers</div>
-
-            <div class="audience-item" data-lang="ar">حاضنات الشركات الناشئة</div>
-            <div class="audience-item" data-lang="en" style="display:none;">Startup Accelerators</div>
-
-            <div class="audience-item" data-lang="ar">مجتمعات الأعمال</div>
-            <div class="audience-item" data-lang="en" style="display:none;">Business Communities</div>
-
-            <div class="audience-item" data-lang="ar">برامج القيادة</div>
-            <div class="audience-item" data-lang="en" style="display:none;">Leadership Programs</div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2 data-lang="ar">جاهزين لنستضيف جلستك القادمة</h2>
-        <h2 data-lang="en" style="display:none;">Ready to Host Your Next Session</h2>
-        <p data-lang="ar">قولنا احتياجك وسنرد عليك بكل التفاصيل خلال دقايق</p>
-        <p data-lang="en" style="display:none;">Tell us your needs and we'll respond with all details within minutes</p>
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" data-i18n="contactHeading">جاهزين لنستضيف جلستك القادمة</h2>
+        <p class="section-lead" data-i18n="contactLead">قولنا احتياجك وسنرد عليك بكل التفاصيل خلال دقايق</p>
 
         <div class="contact-info">
             <div class="contact-item">
-                <h3 data-lang="ar">📱 الاتصال المباشر</h3>
-                <h3 data-lang="en" style="display:none;">📱 Direct Contact</h3>
-                <p data-lang="ar">
-                    <strong>الهاتف:</strong> +20 100 000 0000<br>
-                    <strong>واتساب:</strong> +20 100 000 0000
-                </p>
-                <p data-lang="en" style="display:none;">
-                    <strong>Phone:</strong> +20 100 000 0000<br>
-                    <strong>WhatsApp:</strong> +20 100 000 0000
-                </p>
+                <h3 data-i18n="contact1Title">📱 الاتصال المباشر</h3>
+                <p data-i18n-html="contact1Text"><strong>الهاتف:</strong> <a href="tel:+201000000000">+20 100 000 0000</a><br><strong>واتساب:</strong> <a href="https://wa.me/201000000000">+20 100 000 0000</a></p>
             </div>
             <div class="contact-item">
-                <h3 data-lang="ar">📍 الموقع والبريد</h3>
-                <h3 data-lang="en" style="display:none;">📍 Location & Email</h3>
-                <p data-lang="ar">
-                    <strong>الموقع:</strong> التجمع الخامس، القاهرة الجديدة<br>
-                    <strong>البريد:</strong> info@icanspaces.com
-                </p>
-                <p data-lang="en" style="display:none;">
-                    <strong>Location:</strong> Fifth Settlement, New Cairo<br>
-                    <strong>Email:</strong> info@icanspaces.com
-                </p>
+                <h3 data-i18n="contact2Title">📍 الموقع والبريد</h3>
+                <p data-i18n-html="contact2Text"><strong>الموقع:</strong> التجمع الخامس، القاهرة الجديدة<br><strong>البريد:</strong> <a href="mailto:info@icanspaces.com">info@icanspaces.com</a></p>
             </div>
         </div>
 
         <div class="contact-buttons">
-            <button class="btn-primary" data-lang="ar">تواصل على واتساب</button>
-            <button class="btn-primary" data-lang="en" style="display:none;">WhatsApp Us</button>
-            <button class="btn-secondary" data-lang="ar">اطلب معاينة مجانية</button>
-            <button class="btn-secondary" data-lang="en" style="display:none;">Free Tour</button>
+            <button class="btn-primary js-whatsapp" data-i18n="contactBtn1">تواصل على واتساب</button>
+            <button class="btn-secondary js-whatsapp" data-message-key="tourMsg" data-i18n="contactBtn2">اطلب معاينة مجانية</button>
         </div>
     </section>
+</main>
 
-    <!-- Footer -->
-    <footer>
-        <div>ICAN — Premium Learning Spaces</div>
-        <div class="tagline" data-lang="ar">Learn. Connect. Grow.</div>
-        <div class="tagline" data-lang="en" style="display:none;">Learn. Connect. Grow.</div>
-        <p style="margin-top: 16px; font-size: 12px; color: rgba(255,255,255,0.6);" data-lang="ar">© 2026 جميع الحقوق محفوظة | التجمع الخامس، القاهرة الجديدة</p>
-        <p style="margin-top: 16px; font-size: 12px; color: rgba(255,255,255,0.6);" data-lang="en">© 2026 All Rights Reserved | Fifth Settlement, New Cairo</p>
-    </footer>
+<footer>
+    <div>ICAN — <span data-i18n="footerName">Premium Learning Spaces</span></div>
+    <div class="tagline">Learn. Connect. Grow.</div>
+    <p class="fine" data-i18n="footerRights">© 2026 جميع الحقوق محفوظة | التجمع الخامس، القاهرة الجديدة</p>
+</footer>
 
-    <script>
-        // Language Toggle
-        const langToggle = document.querySelectorAll('.lang-btn');
-        const body = document.body;
+<script>
+(function () {
+    "use strict";
 
-        langToggle.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const lang = btn.getAttribute('data-lang');
-                
-                // Remove active class from all buttons
-                langToggle.forEach(b => b.classList.remove('active'));
-                
-                // Add active class to clicked button
-                btn.classList.add('active');
+    // Single source of truth for the WhatsApp number — update here only.
+    var WHATSAPP_NUMBER = "201000000000";
 
-                // Update body language
-                if (lang === 'en') {
-                    body.classList.add('lang-en');
-                    html.setAttribute('lang', 'en');
-                    html.setAttribute('dir', 'ltr');
-                } else {
-                    body.classList.remove('lang-en');
-                    html.setAttribute('lang', 'ar');
-                    html.setAttribute('dir', 'rtl');
-                }
-
-                // Store preference
-                localStorage.setItem('preferredLanguage', lang);
-            });
-        });
-
-        // Load preferred language
-        const preferred = localStorage.getItem('preferredLanguage') || 'ar';
-        const html = document.documentElement;
-        
-        if (preferred === 'en') {
-            body.classList.add('lang-en');
-            html.setAttribute('lang', 'en');
-            html.setAttribute('dir', 'ltr');
-            document.querySelector('[data-lang="en"].lang-btn').classList.add('active');
-            document.querySelector('[data-lang="ar"].lang-btn').classList.remove('active');
-        } else {
-            document.querySelector('[data-lang="ar"].lang-btn').classList.add('active');
+    var translations = {
+        ar: {
+            skipLink: "تخطي إلى المحتوى",
+            logoTagline: "مساحات تعليمية متميزة",
+            navWhy: "لماذا ICAN", navServices: "الخدمات", navGallery: "المكان", navPricing: "الأسعار", navContact: "تواصل معنا",
+            navBook: "احجز الآن",
+            heroTitle: 'مساحات تعليمية <span class="highlight">متخصصة</span>',
+            heroText: "بيئة احترافية مصممة خصيصاً لنجاح جلساتك التدريبية. من الصباح إلى الليل، مع أحدث التقنيات والراحة الكاملة.",
+            heroBook: "احجز الآن", heroTour: "معاينة مجانية",
+            statCapacity: "سعة القاعة الأساسية", statHoursNum: "14 ساعة", statHours: "ساعات التشغيل يومياً", statPrice: "شفافية الأسعار",
+            whyHeading: "لماذا اختيار ICAN؟", whyLead: "كل تفصيلة في المكان مصممة بغرض واحد: جعل جلستك التدريبية ناجحة ومؤثرة",
+            why1Title: "مساحة متخصصة", why1Text: "ليست غرفة اجتماعات عادية. كل شيء مصمم من البداية للتدريب والتعليم، مما يخلق بيئة تفاعلية مثالية.",
+            why2Title: "تقنية حديثة", why2Text: "شاشة تفاعلية عملاقة، نظام صوتي احترافي، واتصال إنترنت فائق السرعة لعروضك التقديمية.",
+            why3Title: "مرونة زمنية", why3Text: "من 8 صباحاً إلى 10 مساءً. بدون تكاليف إضافية أو شروط مخفية. السعر واحد سواء صباح أو مساء.",
+            why4Title: "شفافية كاملة", why4Text: "السعر شامل الضريبة من اللحظة الأولى. بدون مفاجآت. بدون رسوم مخفية. بدون شروط غير واضحة.",
+            servicesHeading: "خدماتنا", servicesLead: "مصممة لكل شكل من أشكال التعلم المهني",
+            service1Title: "التدريب الداخلي", service1Text: "بيئة احترافية لبرامج تدريب الموظفين وتأهيل الكوادر الجديدة ومبادرات التطوير والتعلم.",
+            service2Title: "ورش العمل", service2Text: "مساحة مصممة تشجع التفاعل والمشاركة الجماعية والتدريب العملي والنقاش المباشر.",
+            service3Title: "الندوات المهنية", service3Text: "قدم عرضك التقديمي بثقة في بيئة تعكس احترافية شركتك وتؤثر على الحضور.",
+            service4Title: "البرامج التعليمية", service4Text: "مساحة حديثة تدعم المدربين والمؤسسات التعليمية في تقديم محتوى تعليمي مؤثر.",
+            galleryHeading: "صور المكان", galleryLead: "تجول داخل قاعات ICAN المتميزة والحديثة",
+            gallery1Title: "القاعة الرئيسية", gallery1Text: "سعة 35 شخص بتقنية عرض متقدمة",
+            gallery2Title: "قاعة التدريب العملي", gallery2Text: "مجهزة بأحدث الأجهزة والمعدات",
+            gallery3Title: "منطقة الاستراحة", gallery3Text: "مريحة وهادئة لاستراحة احترافية",
+            galleryNote: "* يُنصح باستبدال هذه الرسومات التوضيحية بصور فوتوغرافية حقيقية للقاعات لرفع معدل الحجز.",
+            pricingHeading: "الأسعار والباقات", pricingLead: "سعر واضح وشفاف، شامل الضريبة من اللحظة الأولى",
+            price1Title: "بالساعة", egp: "ج.م", taxNote: "شامل الضريبة (14%)",
+            feat1: "سعة حتى 35 شخص", feat2: "الشاشة التفاعلية والصوت", feat3: "واي فاي عالي السرعة",
+            bookBtn: "احجز", popularBadge: "الأكثر طلباً",
+            price2Title: "نصف يوم", price2Note: "4 ساعات متواصلة",
+            feat4: "كل المزايا السابقة", feat5: "استراحة قهوة وشاي", feat6: "دعم فني حاضر",
+            price3Title: "يوم كامل", price3Note: "8 ساعات متواصلة",
+            feat7: "أفضل سعر للساعة", feat8: "استراحتين + غداء", feat9: "ترتيب مرن للقاعة",
+            expHeading: "تجربة ICAN", expLead: "أكثر من مجرد قاعة. رحلة تعليمية احترافية تدعم نجاحك",
+            exp1Title: "بيئة احترافية", exp1Text: "مصممة لإنشاء الانطباع الأول الرائع لحضورك",
+            exp2Title: "عروض تفاعلية", exp2Text: "شاشة عملاقة وتقنية تجعل كل عرض أكثر وضوحاً وتأثيراً",
+            exp3Title: "راحة كاملة", exp3Text: "كراسي ومساحات مصممة لجلسات طويلة دون إرهاق",
+            exp4Title: "تقنية موثوقة", exp4Text: "كل شيء محدث واختبر، مع دعم فني متفرغ",
+            exp5Title: "جو منظم", exp5Text: "خالية من الانقطاعات والتشويشات البيئية",
+            exp6Title: "خدمة متميزة", exp6Text: "فريق احترافي يهتم بكل التفاصيل الصغيرة",
+            processHeading: "خطوات الحجز", processLead: "أربع خطوات بسيطة من التخطيط حتى النجاح",
+            step1Title: "احجز مساحتك", step1Text: "اختر الميعاد والباقة المناسبة لاحتياجاتك",
+            step2Title: "جهز جلستك", step2Text: "المكان جاهز لدعم كل احتياجاتك التقنية",
+            step3Title: "قدم بثقة", step3Text: "اعرض في بيئة مصممة لنجاحك وفعاليتك",
+            step4Title: "اصنع أثراً دائماً", step4Text: "اترك انطباعاً احترافياً يعكس قيمة محتواك",
+            contactHeading: "جاهزين لنستضيف جلستك القادمة", contactLead: "قولنا احتياجك وسنرد عليك بكل التفاصيل خلال دقايق",
+            contact1Title: "📱 الاتصال المباشر",
+            contact1Text: '<strong>الهاتف:</strong> <a href="tel:+201000000000">+20 100 000 0000</a><br><strong>واتساب:</strong> <a href="https://wa.me/201000000000">+20 100 000 0000</a>',
+            contact2Title: "📍 الموقع والبريد",
+            contact2Text: '<strong>الموقع:</strong> التجمع الخامس، القاهرة الجديدة<br><strong>البريد:</strong> <a href="mailto:info@icanspaces.com">info@icanspaces.com</a>',
+            contactBtn1: "تواصل على واتساب", contactBtn2: "اطلب معاينة مجانية",
+            footerName: "مساحات تعليمية متميزة",
+            footerRights: "© 2026 جميع الحقوق محفوظة | التجمع الخامس، القاهرة الجديدة",
+            navToggleLabel: "فتح قائمة التنقل",
+            metaTitle: "ICAN | قاعات تدريب وورش عمل للإيجار بالتجمع الخامس، القاهرة",
+            metaDesc: "ICAN مساحات تعليمية احترافية للتدريب والورش في التجمع الخامس، القاهرة الجديدة. سعة حتى 35 شخص، أسعار شفافة شاملة الضريبة.",
+            bookMsg: "أريد الحجز", tourMsg: "أريد معاينة مجانية للمكان",
+            bookHourly: "أريد الحجز بالساعة", bookHalf: "أريد حجز باقة نصف اليوم", bookFull: "أريد حجز باقة اليوم الكامل"
+        },
+        en: {
+            skipLink: "Skip to content",
+            logoTagline: "Premium Learning Spaces",
+            navWhy: "Why ICAN", navServices: "Services", navGallery: "Gallery", navPricing: "Pricing", navContact: "Contact",
+            navBook: "Book Now",
+            heroTitle: 'Premium Learning <span class="highlight">Environments</span>',
+            heroText: "Professional spaces designed specifically for your training success. From morning to night, with the latest technology and complete comfort.",
+            heroBook: "Book Now", heroTour: "Free Tour",
+            statCapacity: "Hall Capacity", statHoursNum: "14 hrs", statHours: "Daily Operation", statPrice: "Price Transparency",
+            whyHeading: "Why Choose ICAN?", whyLead: "Every detail is designed with one purpose: making your training session successful and impactful",
+            why1Title: "Specialized Space", why1Text: "Not just another meeting room. Everything is designed from the ground up for training and learning, creating the perfect interactive environment.",
+            why2Title: "Modern Technology", why2Text: "Interactive displays, professional audio systems, and high-speed internet for seamless presentations.",
+            why3Title: "Time Flexibility", why3Text: "From 8 AM to 10 PM. No hidden fees or additional charges. Same price whether morning or evening.",
+            why4Title: "Complete Transparency", why4Text: "Price includes tax from the start. No surprises. No hidden fees. No unclear conditions.",
+            servicesHeading: "Our Services", servicesLead: "Designed for every type of professional learning",
+            service1Title: "Corporate Training", service1Text: "Professional environment for employee training, onboarding programs, and L&D initiatives.",
+            service2Title: "Workshops", service2Text: "Purpose-built spaces encouraging interaction, participation, collaboration, and hands-on learning.",
+            service3Title: "Professional Seminars", service3Text: "Present with confidence in an environment reflecting your organization's professionalism.",
+            service4Title: "Educational Programs", service4Text: "Modern space supporting instructors and educational institutions in delivering impactful content.",
+            galleryHeading: "Our Spaces", galleryLead: "Explore our modern and distinguished training spaces",
+            gallery1Title: "Main Hall", gallery1Text: "35 capacity with advanced presentation tech",
+            gallery2Title: "Practical Training Room", gallery2Text: "Equipped with latest tools and devices",
+            gallery3Title: "Break Area", gallery3Text: "Comfortable and quiet break area",
+            galleryNote: "* We recommend replacing these placeholder icons with real photographs of the venue to increase bookings.",
+            pricingHeading: "Pricing & Packages", pricingLead: "Clear and transparent pricing, including tax from the start",
+            price1Title: "Hourly", egp: "EGP", taxNote: "Tax included (14%)",
+            feat1: "Up to 35 people", feat2: "Interactive display & audio", feat3: "High-speed WiFi",
+            bookBtn: "Book", popularBadge: "Most Popular",
+            price2Title: "Half Day", price2Note: "4 continuous hours",
+            feat4: "All previous benefits", feat5: "Coffee & tea break", feat6: "Technical support",
+            price3Title: "Full Day", price3Note: "8 continuous hours",
+            feat7: "Best hourly rate", feat8: "2 breaks + lunch", feat9: "Flexible setup",
+            expHeading: "The ICAN Experience", expLead: "More than just a room. A professional learning journey supporting your success",
+            exp1Title: "Professional Environment", exp1Text: "Designed to create an excellent first impression",
+            exp2Title: "Interactive Presentations", exp2Text: "Giant screen and technology making presentations clearer and more impactful",
+            exp3Title: "Complete Comfort", exp3Text: "Seating and spaces designed for extended sessions",
+            exp4Title: "Reliable Technology", exp4Text: "Everything updated and tested with dedicated support",
+            exp5Title: "Focused Atmosphere", exp5Text: "Free from distractions and environmental noise",
+            exp6Title: "Exceptional Service", exp6Text: "Professional team caring for every detail",
+            processHeading: "Booking Process", processLead: "Four simple steps from planning to success",
+            step1Title: "Book Your Space", step1Text: "Choose your preferred time and package",
+            step2Title: "Prepare Your Session", step2Text: "Everything is ready to support your needs",
+            step3Title: "Present with Confidence", step3Text: "Present in a space designed for your success",
+            step4Title: "Create Lasting Impact", step4Text: "Leave a lasting professional impression",
+            contactHeading: "Ready to Host Your Next Session", contactLead: "Tell us your needs and we'll respond with all details within minutes",
+            contact1Title: "📱 Direct Contact",
+            contact1Text: '<strong>Phone:</strong> <a href="tel:+201000000000">+20 100 000 0000</a><br><strong>WhatsApp:</strong> <a href="https://wa.me/201000000000">+20 100 000 0000</a>',
+            contact2Title: "📍 Location & Email",
+            contact2Text: '<strong>Location:</strong> Fifth Settlement, New Cairo<br><strong>Email:</strong> <a href="mailto:info@icanspaces.com">info@icanspaces.com</a>',
+            contactBtn1: "WhatsApp Us", contactBtn2: "Free Tour",
+            footerName: "Premium Learning Spaces",
+            footerRights: "© 2026 All Rights Reserved | Fifth Settlement, New Cairo",
+            navToggleLabel: "Open navigation menu",
+            metaTitle: "ICAN | Training Halls & Workshop Spaces for Rent, New Cairo",
+            metaDesc: "ICAN offers professional training and workshop spaces in Fifth Settlement, New Cairo. Up to 35 people, transparent tax-included pricing.",
+            bookMsg: "I'd like to book", tourMsg: "I'd like a free tour of the space",
+            bookHourly: "I'd like to book the hourly package", bookHalf: "I'd like to book the half-day package", bookFull: "I'd like to book the full-day package"
         }
+    };
 
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+    function applyLanguage(lang) {
+        var dict = translations[lang];
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n');
+            if (dict[key] !== undefined) el.textContent = dict[key];
         });
-    </script>
+        document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n-html');
+            if (dict[key] !== undefined) el.innerHTML = dict[key];
+        });
+
+        document.documentElement.setAttribute('lang', lang);
+        document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+        document.body.classList.toggle('lang-en', lang === 'en');
+
+        document.title = dict.metaTitle;
+        var metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute('content', dict.metaDesc);
+
+        var navToggle = document.getElementById('navToggle');
+        if (navToggle) navToggle.setAttribute('aria-label', dict.navToggleLabel);
+
+        document.querySelectorAll('.lang-btn').forEach(function (btn) {
+            btn.setAttribute('aria-pressed', btn.getAttribute('data-lang') === lang ? 'true' : 'false');
+        });
+
+        try { localStorage.setItem('icanPreferredLanguage', lang); } catch (e) { /* storage unavailable, ignore */ }
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () { applyLanguage(btn.getAttribute('data-lang')); });
+    });
+
+    var preferred = 'ar';
+    try { preferred = localStorage.getItem('icanPreferredLanguage') || 'ar'; } catch (e) { /* ignore */ }
+    applyLanguage(preferred);
+
+    // Mobile nav toggle
+    var navToggle = document.getElementById('navToggle');
+    var navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', function () {
+        var isOpen = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+            navLinks.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    // WhatsApp booking buttons: each button can carry a data-message-key for a tailored message
+    document.querySelectorAll('.js-whatsapp').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var lang = document.documentElement.getAttribute('lang') || 'ar';
+            var dict = translations[lang];
+            var key = btn.getAttribute('data-message-key') || 'bookMsg';
+            var text = dict[key] || dict.bookMsg;
+            window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
+        });
+    });
+})();
+</script>
 </body>
 </html>
